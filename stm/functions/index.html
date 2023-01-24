@@ -1,0 +1,2740 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="This is a demo of MkDoxy, a tool for generating Doxygen documentation from Markdown files.">
+      
+      
+        <meta name="author" content="Jakub Andrýsek">
+      
+      
+        <link rel="canonical" href="https://jakubandrysek.github.io/mkdoxy-demo/stm/functions/">
+      
+      
+        <link rel="prev" href="../namespace_member_enums/">
+      
+      
+        <link rel="next" href="../variables/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>Functions - MkDoxy Demo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#functions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="MkDoxy Demo" class="md-header__button md-logo" aria-label="MkDoxy Demo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MkDoxy Demo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Functions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+          
+        
+      </form>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/JakubAndrysek/mkdoxy-demo" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    JakubAndrysek/mkdoxy-demo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../useage/" class="md-tabs__link">
+      How to use it
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../api/" class="md-tabs__link md-tabs__link--active">
+        API Demo
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MkDoxy Demo" class="md-nav__button md-logo" aria-label="MkDoxy Demo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    MkDoxy Demo
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/JakubAndrysek/mkdoxy-demo" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    JakubAndrysek/mkdoxy-demo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../useage/" class="md-nav__link">
+        How to use it
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../api/">API Demo</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="API Demo" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          API Demo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" tabindex="0" aria-expanded="false">
+          ESP-32
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="ESP-32" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          ESP-32
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/links/" class="md-nav__link">
+        Links
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_2_2" type="checkbox" id="__nav_3_2_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2" tabindex="0" aria-expanded="false">
+          Classes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Classes" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Classes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/annotated/" class="md-nav__link">
+        Class List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/classes/" class="md-nav__link">
+        Class Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/hierarchy/" class="md-nav__link">
+        Class Hierarchy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/class_members/" class="md-nav__link">
+        Class Members
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/class_member_functions/" class="md-nav__link">
+        Class Member Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/class_member_variables/" class="md-nav__link">
+        Class Member Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/class_member_typedefs/" class="md-nav__link">
+        Class Member Typedefs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/class_member_enums/" class="md-nav__link">
+        Class Member Enumerations
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_2_3" type="checkbox" id="__nav_3_2_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_3" tabindex="0" aria-expanded="false">
+          Namespaces
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Namespaces" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Namespaces
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/namespaces/" class="md-nav__link">
+        Namespace List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/namespace_members/" class="md-nav__link">
+        Namespace Members
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/namespace_member_functions/" class="md-nav__link">
+        Namespace Member Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/namespace_member_variables/" class="md-nav__link">
+        Namespace Member Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/namespace_member_typedefs/" class="md-nav__link">
+        Namespace Member Typedefs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/namespace_member_enums/" class="md-nav__link">
+        Namespace Member Enumerations
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/functions/" class="md-nav__link">
+        Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/variables/" class="md-nav__link">
+        Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/macros/" class="md-nav__link">
+        Macros
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/files/" class="md-nav__link">
+        Files
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" checked>
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" tabindex="0" aria-expanded="true">
+          STM-32
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="STM-32" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          STM-32
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../links/" class="md-nav__link">
+        Links
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_3_2" type="checkbox" id="__nav_3_3_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_2" tabindex="0" aria-expanded="false">
+          Classes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Classes" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Classes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annotated/" class="md-nav__link">
+        Class List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classes/" class="md-nav__link">
+        Class Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hierarchy/" class="md-nav__link">
+        Class Hierarchy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_members/" class="md-nav__link">
+        Class Members
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_member_functions/" class="md-nav__link">
+        Class Member Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_member_variables/" class="md-nav__link">
+        Class Member Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_member_typedefs/" class="md-nav__link">
+        Class Member Typedefs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_member_enums/" class="md-nav__link">
+        Class Member Enumerations
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_3_3" type="checkbox" id="__nav_3_3_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_3" tabindex="0" aria-expanded="false">
+          Namespaces
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Namespaces" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Namespaces
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespaces/" class="md-nav__link">
+        Namespace List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_members/" class="md-nav__link">
+        Namespace Members
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_member_functions/" class="md-nav__link">
+        Namespace Member Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_member_variables/" class="md-nav__link">
+        Namespace Member Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_member_typedefs/" class="md-nav__link">
+        Namespace Member Typedefs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_member_enums/" class="md-nav__link">
+        Namespace Member Enumerations
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Functions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Functions
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a" class="md-nav__link">
+    a
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    b
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    c
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d" class="md-nav__link">
+    d
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e" class="md-nav__link">
+    e
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#f" class="md-nav__link">
+    f
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#g" class="md-nav__link">
+    g
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#h" class="md-nav__link">
+    h
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i" class="md-nav__link">
+    i
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l" class="md-nav__link">
+    l
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m" class="md-nav__link">
+    m
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o" class="md-nav__link">
+    o
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#p" class="md-nav__link">
+    p
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r" class="md-nav__link">
+    r
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s" class="md-nav__link">
+    s
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#t" class="md-nav__link">
+    t
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#u" class="md-nav__link">
+    u
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v" class="md-nav__link">
+    v
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_" class="md-nav__link">
+    _
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../variables/" class="md-nav__link">
+        Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../macros/" class="md-nav__link">
+        Macros
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../files/" class="md-nav__link">
+        Files
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_4" tabindex="0" aria-expanded="false">
+          Animal
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Animal" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Animal
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/links/" class="md-nav__link">
+        Links
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_4_2" type="checkbox" id="__nav_3_4_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_4_2" tabindex="0" aria-expanded="false">
+          Classes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Classes" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Classes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/annotated/" class="md-nav__link">
+        Class List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/classes/" class="md-nav__link">
+        Class Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/hierarchy/" class="md-nav__link">
+        Class Hierarchy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/class_members/" class="md-nav__link">
+        Class Members
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/class_member_functions/" class="md-nav__link">
+        Class Member Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/class_member_variables/" class="md-nav__link">
+        Class Member Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/class_member_typedefs/" class="md-nav__link">
+        Class Member Typedefs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/class_member_enums/" class="md-nav__link">
+        Class Member Enumerations
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_4_3" type="checkbox" id="__nav_3_4_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_4_3" tabindex="0" aria-expanded="false">
+          Namespaces
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Namespaces" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Namespaces
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/namespaces/" class="md-nav__link">
+        Namespace List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/namespace_members/" class="md-nav__link">
+        Namespace Members
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/namespace_member_functions/" class="md-nav__link">
+        Namespace Member Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/namespace_member_variables/" class="md-nav__link">
+        Namespace Member Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/namespace_member_typedefs/" class="md-nav__link">
+        Namespace Member Typedefs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/namespace_member_enums/" class="md-nav__link">
+        Namespace Member Enumerations
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/functions/" class="md-nav__link">
+        Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/variables/" class="md-nav__link">
+        Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/macros/" class="md-nav__link">
+        Macros
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/files/" class="md-nav__link">
+        Files
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a" class="md-nav__link">
+    a
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    b
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    c
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d" class="md-nav__link">
+    d
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e" class="md-nav__link">
+    e
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#f" class="md-nav__link">
+    f
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#g" class="md-nav__link">
+    g
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#h" class="md-nav__link">
+    h
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i" class="md-nav__link">
+    i
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l" class="md-nav__link">
+    l
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m" class="md-nav__link">
+    m
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o" class="md-nav__link">
+    o
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#p" class="md-nav__link">
+    p
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r" class="md-nav__link">
+    r
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s" class="md-nav__link">
+    s
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#t" class="md-nav__link">
+    t
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#u" class="md-nav__link">
+    u
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v" class="md-nav__link">
+    v
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_" class="md-nav__link">
+    _
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+
+<h1 id="functions">Functions</h1>
+<h2 id="a">a</h2>
+<ul>
+<li><strong>AUXILIARY_AND_MOTOR_ADC_IRQ_HANDLER</strong> (<a href="../_power_8cpp/"><strong>Power.cpp</strong></a>)</li>
+<li><strong>adcWait</strong> (<a href="../_power_8cpp/"><strong>Power.cpp</strong></a>)</li>
+</ul>
+<h2 id="b">b</h2>
+<ul>
+<li><strong>buttonControllerPoll</strong> (<a href="../_button_controller_8hpp/"><strong>ButtonController.hpp</strong></a>, <a href="../_button_controller_8cpp/"><strong>ButtonController.cpp</strong></a>)</li>
+<li><strong>buttonControllerSetDebug</strong> (<a href="../_button_controller_8hpp/"><strong>ButtonController.hpp</strong></a>, <a href="../_button_controller_8cpp/"><strong>ButtonController.cpp</strong></a>)</li>
+<li><strong>buzzerSetState</strong> (<a href="../_buzzer_controller_8hpp/"><strong>BuzzerController.hpp</strong></a>)</li>
+</ul>
+<h2 id="c">c</h2>
+<ul>
+<li><strong>clocksInit</strong> (<a href="../_bsp_8hpp/"><strong>Bsp.hpp</strong></a>)</li>
+<li><strong>controlLinkReset</strong> (<a href="../_control_link_8hpp/"><strong>ControlLink.hpp</strong></a>, <a href="../_control_link_8cpp/"><strong>ControlLink.cpp</strong></a>)</li>
+<li><strong>controlLinkRx</strong> (<a href="../_control_link_8hpp/"><strong>ControlLink.hpp</strong></a>, <a href="../_control_link_8cpp/"><strong>ControlLink.cpp</strong></a>)</li>
+<li><strong>controlLinkTx</strong> (<a href="../_control_link_8hpp/"><strong>ControlLink.hpp</strong></a>, <a href="../_control_link_8cpp/"><strong>ControlLink.cpp</strong></a>)</li>
+<li><strong>controlUartInit</strong> (<a href="../_control_link_8hpp/"><strong>ControlLink.hpp</strong></a>, <a href="../_control_link_8cpp/"><strong>ControlLink.cpp</strong></a>)</li>
+<li><strong>cdcLinkInit</strong> (<a href="../_usb_cdc_link_8h/"><strong>UsbCdcLink.h</strong></a>, <a href="../_usb_cdc_link_8cpp/"><strong>UsbCdcLink.cpp</strong></a>)</li>
+<li><strong>cdcLinkIsDebugEpEnabled</strong> (<a href="../_usb_cdc_link_8h/"><strong>UsbCdcLink.h</strong></a>, <a href="../_usb_cdc_link_8cpp/"><strong>UsbCdcLink.cpp</strong></a>)</li>
+<li><strong>CONTROLUART_TX_DMA_HANDLER</strong> (<a href="../_control_link_8cpp/"><strong>ControlLink.cpp</strong></a>)</li>
+<li><strong>controlLinkUpdateRxFifo</strong> (<a href="../_control_link_8cpp/"><strong>ControlLink.cpp</strong></a>)</li>
+<li><strong>checkBatteryVoltage</strong> (<a href="../_power_8cpp/"><strong>Power.cpp</strong></a>)</li>
+<li><strong>cdc_control</strong> (<a href="../_usb_cdc_link_8cpp/"><strong>UsbCdcLink.cpp</strong></a>)</li>
+<li><strong>cdc_control_debug</strong> (<a href="../_usb_cdc_link_8cpp/"><strong>UsbCdcLink.cpp</strong></a>)</li>
+<li><strong>cdc_control_tunnel</strong> (<a href="../_usb_cdc_link_8cpp/"><strong>UsbCdcLink.cpp</strong></a>)</li>
+<li><strong>cdc_getdesc</strong> (<a href="../_usb_cdc_link_8cpp/"><strong>UsbCdcLink.cpp</strong></a>)</li>
+<li><strong>cdc_setconf</strong> (<a href="../_usb_cdc_link_8cpp/"><strong>UsbCdcLink.cpp</strong></a>)</li>
+</ul>
+<h2 id="d">d</h2>
+<ul>
+<li><strong>debugLinkPoll</strong> (<a href="../_debug_link_8hpp/"><strong>DebugLink.hpp</strong></a>, <a href="../_debug_link_8cpp/"><strong>DebugLink.cpp</strong></a>)</li>
+<li><strong>debugLinkTx</strong> (<a href="../_debug_link_8hpp/"><strong>DebugLink.hpp</strong></a>, <a href="../_debug_link_8cpp/"><strong>DebugLink.cpp</strong></a>)</li>
+<li><strong>debugUartInit</strong> (<a href="../_debug_link_8hpp/"><strong>DebugLink.hpp</strong></a>, <a href="../_debug_link_8cpp/"><strong>DebugLink.cpp</strong></a>)</li>
+<li><strong>dispatcherEnqueueRequest</strong> (<a href="../_dispatcher_8hpp/"><strong>Dispatcher.hpp</strong></a>, <a href="../_dispatcher_8cpp/"><strong>Dispatcher.cpp</strong></a>)</li>
+<li><strong>dispatcherEnqueueStatus</strong> (<a href="../_dispatcher_8hpp/"><strong>Dispatcher.hpp</strong></a>, <a href="../_dispatcher_8cpp/"><strong>Dispatcher.cpp</strong></a>)</li>
+<li><strong>dispatcherInit</strong> (<a href="../_dispatcher_8hpp/"><strong>Dispatcher.hpp</strong></a>, <a href="../_dispatcher_8cpp/"><strong>Dispatcher.cpp</strong></a>)</li>
+<li><strong>dispatcherPoll</strong> (<a href="../_dispatcher_8hpp/"><strong>Dispatcher.hpp</strong></a>, <a href="../_dispatcher_8cpp/"><strong>Dispatcher.cpp</strong></a>)</li>
+<li><strong>dispatcherReset</strong> (<a href="../_dispatcher_8hpp/"><strong>Dispatcher.hpp</strong></a>, <a href="../_dispatcher_8cpp/"><strong>Dispatcher.cpp</strong></a>)</li>
+<li><strong>DEBUG_HEX</strong> (<a href="../_debug_8hpp/"><strong>Debug.hpp</strong></a>)</li>
+<li><strong>DEBUGUART_HANDLER</strong> (<a href="../_debug_link_8cpp/"><strong>DebugLink.cpp</strong></a>)</li>
+<li><strong>DEBUGUART_TX_DMA_HANDLER</strong> (<a href="../_debug_link_8cpp/"><strong>DebugLink.cpp</strong></a>)</li>
+<li><strong>debugDownstreamHandler</strong> (<a href="../_debug_link_8cpp/"><strong>DebugLink.cpp</strong></a>)</li>
+<li><strong>debugLinkHandleCommand</strong> (<a href="../_debug_link_8cpp/"><strong>DebugLink.cpp</strong></a>)</li>
+<li><strong>debugUpstreamHandler</strong> (<a href="../_debug_link_8cpp/"><strong>DebugLink.cpp</strong></a>)</li>
+<li><strong>dispatcherProcessReq</strong> (<a href="../_dispatcher_8cpp/"><strong>Dispatcher.cpp</strong></a>)</li>
+</ul>
+<h2 id="e">e</h2>
+<ul>
+<li><strong>EXTI4_IRQHandler</strong> (<a href="../_bsp_8cpp/"><strong>Bsp.cpp</strong></a>)</li>
+<li><strong>EXTI9_5_IRQHandler</strong> (<a href="../_bsp_8cpp/"><strong>Bsp.cpp</strong></a>)</li>
+</ul>
+<h2 id="f">f</h2>
+<ul>
+<li><strong>flashWritePage</strong> (<a href="../_flash_8hpp/"><strong>Flash.hpp</strong></a>)</li>
+</ul>
+<h2 id="g">g</h2>
+<ul>
+<li><strong>getButtons</strong> (<a href="../_bsp_8hpp/"><strong>Bsp.hpp</strong></a>)</li>
+<li><strong>getExternalSensorDWord</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>, <a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>getXFineGain</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>, <a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>getXGyroOffsetTC</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>, <a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>getYFineGain</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>, <a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>getYGyroOffsetTC</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>, <a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>getZFineGain</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>, <a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>getZGyroOffsetTC</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>, <a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+</ul>
+<h2 id="h">h</h2>
+<ul>
+<li><strong>HAL_DMA_PollForTransfer_Really</strong> (<a href="../_hal_dma_8hpp/"><strong>HalDma.hpp</strong></a>)</li>
+<li><strong>HAL_I2C_ErrorCallback</strong> (<a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>HAL_I2C_MasterRxCpltCallback</strong> (<a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>HAL_I2C_MasterTxCpltCallback</strong> (<a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>HAL_I2C_MemRxCpltCallback</strong> (<a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>HAL_I2C_MemTxCpltCallback</strong> (<a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+</ul>
+<h2 id="i">i</h2>
+<ul>
+<li><strong>isPressed</strong> (<a href="../_bsp_8hpp/"><strong>Bsp.hpp</strong></a>)</li>
+<li><strong>I2Cdev_IsDeviceReady</strong> (<a href="../_i2c_controller_8hpp/"><strong>I2cController.hpp</strong></a>, <a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>I2Cdev_Master_Receive</strong> (<a href="../_i2c_controller_8hpp/"><strong>I2cController.hpp</strong></a>, <a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>I2Cdev_Master_Transmit</strong> (<a href="../_i2c_controller_8hpp/"><strong>I2cController.hpp</strong></a>, <a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>I2Cdev_Mem_Read</strong> (<a href="../_i2c_controller_8hpp/"><strong>I2cController.hpp</strong></a>, <a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>I2Cdev_Mem_Write</strong> (<a href="../_i2c_controller_8hpp/"><strong>I2cController.hpp</strong></a>, <a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>I2Cdev_Slave_Receive</strong> (<a href="../_i2c_controller_8hpp/"><strong>I2cController.hpp</strong></a>)</li>
+<li><strong>I2Cdev_Slave_Transmit</strong> (<a href="../_i2c_controller_8hpp/"><strong>I2cController.hpp</strong></a>)</li>
+<li><strong>I2Cdev_init</strong> (<a href="../_i2c_controller_8hpp/"><strong>I2cController.hpp</strong></a>, <a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>I2Cdev_readBit</strong> (<a href="../_i2c_controller_8hpp/"><strong>I2cController.hpp</strong></a>, <a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>I2Cdev_readBitW</strong> (<a href="../_i2c_controller_8hpp/"><strong>I2cController.hpp</strong></a>, <a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>I2Cdev_readBits</strong> (<a href="../_i2c_controller_8hpp/"><strong>I2cController.hpp</strong></a>, <a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>I2Cdev_readBitsW</strong> (<a href="../_i2c_controller_8hpp/"><strong>I2cController.hpp</strong></a>, <a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>I2Cdev_readByte</strong> (<a href="../_i2c_controller_8hpp/"><strong>I2cController.hpp</strong></a>, <a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>I2Cdev_readBytes</strong> (<a href="../_i2c_controller_8hpp/"><strong>I2cController.hpp</strong></a>, <a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>I2Cdev_readWord</strong> (<a href="../_i2c_controller_8hpp/"><strong>I2cController.hpp</strong></a>, <a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>I2Cdev_readWords</strong> (<a href="../_i2c_controller_8hpp/"><strong>I2cController.hpp</strong></a>, <a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>I2Cdev_scan</strong> (<a href="../_i2c_controller_8hpp/"><strong>I2cController.hpp</strong></a>, <a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>I2Cdev_writeBit</strong> (<a href="../_i2c_controller_8hpp/"><strong>I2cController.hpp</strong></a>, <a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>I2Cdev_writeBitW</strong> (<a href="../_i2c_controller_8hpp/"><strong>I2cController.hpp</strong></a>, <a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>I2Cdev_writeBits</strong> (<a href="../_i2c_controller_8hpp/"><strong>I2cController.hpp</strong></a>, <a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>I2Cdev_writeBitsW</strong> (<a href="../_i2c_controller_8hpp/"><strong>I2cController.hpp</strong></a>, <a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>I2Cdev_writeByte</strong> (<a href="../_i2c_controller_8hpp/"><strong>I2cController.hpp</strong></a>, <a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>I2Cdev_writeBytes</strong> (<a href="../_i2c_controller_8hpp/"><strong>I2cController.hpp</strong></a>, <a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>I2Cdev_writeWord</strong> (<a href="../_i2c_controller_8hpp/"><strong>I2cController.hpp</strong></a>, <a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>I2Cdev_writeWords</strong> (<a href="../_i2c_controller_8hpp/"><strong>I2cController.hpp</strong></a>, <a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>i2cDispatch</strong> (<a href="../_i2c_controller_8hpp/"><strong>I2cController.hpp</strong></a>, <a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>i2cReset</strong> (<a href="../_i2c_controller_8hpp/"><strong>I2cController.hpp</strong></a>, <a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>isInInterrupt</strong> (<a href="../_debug_8hpp/"><strong>Debug.hpp</strong></a>)</li>
+<li><strong>I2C1_ER_IRQHandler</strong> (<a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>I2C1_EV_IRQHandler</strong> (<a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>i2cNotify</strong> (<a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>i2cWait</strong> (<a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+<li><strong>i2cWrap</strong> (<a href="../_i2c_controller_8cpp/"><strong>I2cController.cpp</strong></a>)</li>
+</ul>
+<h2 id="l">l</h2>
+<ul>
+<li><strong>LL_ADC_SetChannelSamplingTimeFix</strong> (<a href="../_bsp_8hpp/"><strong>Bsp.hpp</strong></a>)</li>
+<li><strong>LL_GPIO_AF_Remap</strong> (<a href="../_bsp_8hpp/"><strong>Bsp.hpp</strong></a>)</li>
+<li><strong>loadCalibration</strong> (<a href="../_power_8cpp/"><strong>Power.cpp</strong></a>)</li>
+</ul>
+<h2 id="m">m</h2>
+<ul>
+<li><strong>motorDispatch</strong> (<a href="../_motor_controller_8hpp/"><strong>MotorController.hpp</strong></a>, <a href="../_motor_controller_8cpp/"><strong>MotorController.cpp</strong></a>)</li>
+<li><strong>motorInit</strong> (<a href="../_motor_controller_8hpp/"><strong>MotorController.hpp</strong></a>, <a href="../_motor_controller_8cpp/"><strong>MotorController.cpp</strong></a>)</li>
+<li><strong>motorReset</strong> (<a href="../_motor_controller_8hpp/"><strong>MotorController.hpp</strong></a>, <a href="../_motor_controller_8cpp/"><strong>MotorController.cpp</strong></a>)</li>
+<li><strong>MPU6050</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getAccelFIFOEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getAccelXSelfTest</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getAccelYSelfTest</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getAccelZSelfTest</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getAcceleration</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getAccelerationX</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getAccelerationY</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getAccelerationZ</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getAccelerometerPowerOnDelay</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getAuxVDDIOLevel</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getClockOutputEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getClockSource</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getDHPFMode</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getDLPFMode</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getDMPConfig1</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getDMPConfig2</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getDMPEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getDMPInt0Status</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getDMPInt1Status</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getDMPInt2Status</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getDMPInt3Status</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getDMPInt4Status</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getDMPInt5Status</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getDeviceID</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getExternalFrameSync</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getExternalSensorByte</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getExternalSensorWord</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getExternalShadowDelayEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getFIFOByte</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getFIFOBytes</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getFIFOCount</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getFIFOEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getFSyncInterruptEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getFSyncInterruptLevel</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getFreefallDetectionCounterDecrement</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getFreefallDetectionDuration</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getFreefallDetectionThreshold</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getFullScaleAccelRange</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getFullScaleGyroRange</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getI2CBypassEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getI2CMasterModeEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getIntDMPEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getIntDMPStatus</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getIntDataReadyEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getIntDataReadyStatus</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getIntEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getIntFIFOBufferOverflowEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getIntFIFOBufferOverflowStatus</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getIntFreefallEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getIntFreefallStatus</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getIntI2CMasterEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getIntI2CMasterStatus</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getIntMotionEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getIntMotionStatus</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getIntPLLReadyEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getIntPLLReadyStatus</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getIntStatus</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getIntZeroMotionEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getIntZeroMotionStatus</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getInterruptDrive</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getInterruptLatch</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getInterruptLatchClear</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getInterruptMode</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getLostArbitration</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getMasterClockSpeed</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getMotion6</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getMotion9</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getMotionDetectionCounterDecrement</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getMotionDetectionDuration</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getMotionDetectionThreshold</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getMultiMasterEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getOTPBankValid</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getPassthroughStatus</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getRate</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getRotation</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getRotationX</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getRotationY</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getRotationZ</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getSlate4InputByte</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getSlave0FIFOEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getSlave0Nack</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getSlave1FIFOEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getSlave1Nack</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getSlave2FIFOEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getSlave2Nack</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getSlave3FIFOEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getSlave3Nack</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getSlave4Address</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getSlave4Enabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getSlave4InterruptEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getSlave4IsDone</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getSlave4MasterDelay</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getSlave4Nack</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getSlave4Register</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getSlave4WriteMode</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getSlaveAddress</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getSlaveDataLength</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getSlaveDelayEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getSlaveEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getSlaveReadWriteTransitionEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getSlaveRegister</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getSlaveWordByteSwap</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getSlaveWordGroupOffset</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getSlaveWriteMode</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getSleepEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getStandbyXAccelEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getStandbyXGyroEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getStandbyYAccelEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getStandbyYGyroEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getStandbyZAccelEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getStandbyZGyroEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getTempFIFOEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getTempSensorEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getTemperature</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getWaitForExternalSensorEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getWakeCycleEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getWakeFrequency</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getXAccelOffset</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getXGyroFIFOEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getXGyroOffset</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getXNegMotionDetected</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getXPosMotionDetected</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getYAccelOffset</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getYGyroFIFOEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getYGyroOffset</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getYNegMotionDetected</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getYPosMotionDetected</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getZAccelOffset</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getZGyroFIFOEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getZGyroOffset</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getZNegMotionDetected</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getZPosMotionDetected</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getZeroMotionDetected</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getZeroMotionDetectionDuration</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_getZeroMotionDetectionThreshold</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_init</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_initialize</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_readMemoryBlock</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_readMemoryByte</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_reset</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_resetAccelerometerPath</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_resetDMP</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_resetFIFO</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_resetGyroscopePath</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_resetI2CMaster</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_resetSensors</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_resetTemperaturePath</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setAccelFIFOEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setAccelXSelfTest</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setAccelYSelfTest</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setAccelZSelfTest</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setAccelerometerPowerOnDelay</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setAuxVDDIOLevel</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setClockOutputEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setClockSource</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setDHPFMode</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setDLPFMode</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setDMPConfig1</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setDMPConfig2</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setDMPEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setDeviceID</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setExternalFrameSync</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setExternalShadowDelayEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setFIFOByte</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setFIFOEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setFSyncInterruptEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setFSyncInterruptLevel</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setFreefallDetectionCounterDecrement</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setFreefallDetectionDuration</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setFreefallDetectionThreshold</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setFullScaleAccelRange</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setFullScaleGyroRange</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setI2CBypassEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setI2CMasterModeEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setIntDMPEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setIntDataReadyEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setIntEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setIntFIFOBufferOverflowEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setIntFreefallEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setIntI2CMasterEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setIntMotionEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setIntPLLReadyEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setIntZeroMotionEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setInterruptDrive</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setInterruptLatch</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setInterruptLatchClear</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setInterruptMode</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setMasterClockSpeed</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setMemoryBank</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setMemoryStartAddress</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setMotionDetectionCounterDecrement</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setMotionDetectionDuration</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setMotionDetectionThreshold</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setMultiMasterEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setOTPBankValid</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setRate</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setSlave0FIFOEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setSlave1FIFOEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setSlave2FIFOEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setSlave3FIFOEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setSlave4Address</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setSlave4Enabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setSlave4InterruptEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setSlave4MasterDelay</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setSlave4OutputByte</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setSlave4Register</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setSlave4WriteMode</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setSlaveAddress</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setSlaveDataLength</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setSlaveDelayEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setSlaveEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setSlaveOutputByte</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setSlaveReadWriteTransitionEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setSlaveRegister</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setSlaveWordByteSwap</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setSlaveWordGroupOffset</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setSlaveWriteMode</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setSleepEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setStandbyXAccelEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setStandbyXGyroEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setStandbyYAccelEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setStandbyYGyroEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setStandbyZAccelEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setStandbyZGyroEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setTempFIFOEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setTempSensorEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setWaitForExternalSensorEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setWakeCycleEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setWakeFrequency</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setXAccelOffset</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setXFineGain</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setXGyroFIFOEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setXGyroOffset</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setXGyroOffsetTC</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setYAccelOffset</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setYFineGain</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setYGyroFIFOEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setYGyroOffset</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setYGyroOffsetTC</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setZAccelOffset</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setZFineGain</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setZGyroFIFOEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setZGyroOffset</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setZGyroOffsetTC</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setZeroMotionDetectionDuration</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_setZeroMotionDetectionThreshold</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_switchSPIEnabled</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_testConnection</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_writeMemoryByte</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>mpuCreate</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpuDispatch</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpuInitialize</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpuReset</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpuTick</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getAccelFIFOEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getAccelXSelfTest</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getAccelYSelfTest</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getAccelZSelfTest</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getAcceleration</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getAccelerationX</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getAccelerationY</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getAccelerationZ</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getAccelerometerPowerOnDelay</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getAuxVDDIOLevel</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getClockOutputEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getClockSource</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getDHPFMode</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getDLPFMode</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getDMPConfig1</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getDMPConfig2</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getDMPEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getDMPInt0Status</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getDMPInt1Status</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getDMPInt2Status</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getDMPInt3Status</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getDMPInt4Status</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getDMPInt5Status</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getDeviceID</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getExternalFrameSync</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getExternalSensorByte</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getExternalSensorWord</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getExternalShadowDelayEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getFIFOByte</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getFIFOBytes</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getFIFOCount</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getFIFOEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getFSyncInterruptEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getFSyncInterruptLevel</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getFreefallDetectionCounterDecrement</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getFreefallDetectionDuration</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getFreefallDetectionThreshold</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getFullScaleAccelRange</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getFullScaleGyroRange</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getI2CBypassEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getI2CMasterModeEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getIntDMPEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getIntDMPStatus</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getIntDataReadyEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getIntDataReadyStatus</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getIntEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getIntFIFOBufferOverflowEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getIntFIFOBufferOverflowStatus</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getIntFreefallEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getIntFreefallStatus</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getIntI2CMasterEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getIntI2CMasterStatus</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getIntMotionEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getIntMotionStatus</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getIntPLLReadyEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getIntPLLReadyStatus</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getIntStatus</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getIntZeroMotionEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getIntZeroMotionStatus</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getInterruptDrive</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getInterruptLatch</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getInterruptLatchClear</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getInterruptMode</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getLostArbitration</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getMasterClockSpeed</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getMotion6</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getMotion9</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getMotionDetectionCounterDecrement</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getMotionDetectionDuration</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getMotionDetectionThreshold</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getMultiMasterEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getOTPBankValid</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getPassthroughStatus</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getRate</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getRotation</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getRotationX</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getRotationY</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getRotationZ</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getSlate4InputByte</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getSlave0FIFOEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getSlave0Nack</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getSlave1FIFOEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getSlave1Nack</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getSlave2FIFOEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getSlave2Nack</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getSlave3FIFOEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getSlave3Nack</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getSlave4Address</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getSlave4Enabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getSlave4InterruptEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getSlave4IsDone</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getSlave4MasterDelay</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getSlave4Nack</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getSlave4Register</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getSlave4WriteMode</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getSlaveAddress</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getSlaveDataLength</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getSlaveDelayEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getSlaveEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getSlaveReadWriteTransitionEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getSlaveRegister</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getSlaveWordByteSwap</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getSlaveWordGroupOffset</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getSlaveWriteMode</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getSleepEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getStandbyXAccelEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getStandbyXGyroEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getStandbyYAccelEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getStandbyYGyroEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getStandbyZAccelEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getStandbyZGyroEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getTempFIFOEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getTempSensorEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getTemperature</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getWaitForExternalSensorEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getWakeCycleEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getWakeFrequency</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getXAccelOffset</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getXGyroFIFOEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getXGyroOffset</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getXNegMotionDetected</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getXPosMotionDetected</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getYAccelOffset</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getYGyroFIFOEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getYGyroOffset</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getYNegMotionDetected</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getYPosMotionDetected</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getZAccelOffset</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getZGyroFIFOEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getZGyroOffset</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_getZNegMotionDetected</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getZPosMotionDetected</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getZeroMotionDetected</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getZeroMotionDetectionDuration</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getZeroMotionDetectionThreshold</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_readMemoryBlock</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_readMemoryByte</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_reset</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_resetAccelerometerPath</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_resetDMP</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_resetFIFO</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_resetGyroscopePath</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_resetI2CMaster</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_resetSensors</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_resetTemperaturePath</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setAccelFIFOEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setAccelXSelfTest</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setAccelYSelfTest</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setAccelZSelfTest</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setAccelerometerPowerOnDelay</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setAuxVDDIOLevel</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setClockOutputEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setClockSource</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setDHPFMode</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setDLPFMode</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setDMPConfig1</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_setDMPConfig2</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_setDMPEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_setDeviceID</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_setExternalFrameSync</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setExternalShadowDelayEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setFIFOByte</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_setFIFOEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setFSyncInterruptEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setFSyncInterruptLevel</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setFreefallDetectionCounterDecrement</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setFreefallDetectionDuration</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setFreefallDetectionThreshold</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setFullScaleAccelRange</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setFullScaleGyroRange</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setI2CBypassEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setI2CMasterModeEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setIntDMPEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_setIntDataReadyEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setIntEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setIntFIFOBufferOverflowEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setIntFreefallEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setIntI2CMasterEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setIntMotionEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setIntPLLReadyEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_setIntZeroMotionEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setInterruptDrive</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setInterruptLatch</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setInterruptLatchClear</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setInterruptMode</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setMasterClockSpeed</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setMemoryBank</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_setMemoryStartAddress</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_setMotionDetectionCounterDecrement</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setMotionDetectionDuration</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setMotionDetectionThreshold</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setMultiMasterEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setOTPBankValid</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_setRate</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setSlave0FIFOEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setSlave1FIFOEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setSlave2FIFOEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setSlave3FIFOEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setSlave4Address</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setSlave4Enabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setSlave4InterruptEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setSlave4MasterDelay</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setSlave4OutputByte</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setSlave4Register</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setSlave4WriteMode</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setSlaveAddress</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setSlaveDataLength</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setSlaveDelayEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setSlaveEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setSlaveOutputByte</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setSlaveReadWriteTransitionEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setSlaveRegister</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setSlaveWordByteSwap</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setSlaveWordGroupOffset</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setSlaveWriteMode</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setSleepEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setStandbyXAccelEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_setStandbyXGyroEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_setStandbyYAccelEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_setStandbyYGyroEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_setStandbyZAccelEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_setStandbyZGyroEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_setTempFIFOEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setTempSensorEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setWaitForExternalSensorEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setWakeCycleEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setWakeFrequency</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_setXAccelOffset</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_setXFineGain</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_setXGyroFIFOEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setXGyroOffset</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_setXGyroOffsetTC</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_setYAccelOffset</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_setYFineGain</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_setYGyroFIFOEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setYGyroOffset</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_setYGyroOffsetTC</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_setZAccelOffset</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_setZFineGain</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_setZGyroFIFOEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setZGyroOffset</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_setZGyroOffsetTC</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_setZeroMotionDetectionDuration</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_setZeroMotionDetectionThreshold</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_switchSPIEnabled</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_testConnection</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>, <a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_writeMemoryByte</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpuRead</strong> (<a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpuSend</strong> (<a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpuTickCallback</strong> (<a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>mpu_getExternalSensorDWord</strong> (<a href="../_mpu_controller_8cpp/"><strong>MpuController.cpp</strong></a>)</li>
+<li><strong>main</strong> (<a href="../main_8cpp/"><strong>main.cpp</strong></a>)</li>
+</ul>
+<h2 id="o">o</h2>
+<ul>
+<li><strong>oledDispatch</strong> (<a href="../_oled_controller_8hpp/"><strong>OledController.hpp</strong></a>, <a href="../_oled_controller_8cpp/"><strong>OledController.cpp</strong></a>)</li>
+<li><strong>oledDrawArc</strong> (<a href="../_oled_controller_8hpp/"><strong>OledController.hpp</strong></a>, <a href="../_oled_controller_8cpp/"><strong>OledController.cpp</strong></a>)</li>
+<li><strong>oledDrawCircle</strong> (<a href="../_oled_controller_8hpp/"><strong>OledController.hpp</strong></a>, <a href="../_oled_controller_8cpp/"><strong>OledController.cpp</strong></a>)</li>
+<li><strong>oledDrawLine</strong> (<a href="../_oled_controller_8hpp/"><strong>OledController.hpp</strong></a>, <a href="../_oled_controller_8cpp/"><strong>OledController.cpp</strong></a>)</li>
+<li><strong>oledDrawPixel</strong> (<a href="../_oled_controller_8hpp/"><strong>OledController.hpp</strong></a>, <a href="../_oled_controller_8cpp/"><strong>OledController.cpp</strong></a>)</li>
+<li><strong>oledDrawRectangle</strong> (<a href="../_oled_controller_8hpp/"><strong>OledController.hpp</strong></a>, <a href="../_oled_controller_8cpp/"><strong>OledController.cpp</strong></a>)</li>
+<li><strong>oledFill</strong> (<a href="../_oled_controller_8hpp/"><strong>OledController.hpp</strong></a>, <a href="../_oled_controller_8cpp/"><strong>OledController.cpp</strong></a>)</li>
+<li><strong>oledFillBuffer</strong> (<a href="../_oled_controller_8hpp/"><strong>OledController.hpp</strong></a>, <a href="../_oled_controller_8cpp/"><strong>OledController.cpp</strong></a>)</li>
+<li><strong>oledGetDisplayOn</strong> (<a href="../_oled_controller_8hpp/"><strong>OledController.hpp</strong></a>, <a href="../_oled_controller_8cpp/"><strong>OledController.cpp</strong></a>)</li>
+<li><strong>oledInit</strong> (<a href="../_oled_controller_8hpp/"><strong>OledController.hpp</strong></a>, <a href="../_oled_controller_8cpp/"><strong>OledController.cpp</strong></a>)</li>
+<li><strong>oledInitOld</strong> (<a href="../_oled_controller_8hpp/"><strong>OledController.hpp</strong></a>)</li>
+<li><strong>oledInitStm</strong> (<a href="../_oled_controller_8hpp/"><strong>OledController.hpp</strong></a>)</li>
+<li><strong>oledPolyline</strong> (<a href="../_oled_controller_8hpp/"><strong>OledController.hpp</strong></a>, <a href="../_oled_controller_8cpp/"><strong>OledController.cpp</strong></a>)</li>
+<li><strong>oledSetContrast</strong> (<a href="../_oled_controller_8hpp/"><strong>OledController.hpp</strong></a>, <a href="../_oled_controller_8cpp/"><strong>OledController.cpp</strong></a>)</li>
+<li><strong>oledSetCursor</strong> (<a href="../_oled_controller_8hpp/"><strong>OledController.hpp</strong></a>, <a href="../_oled_controller_8cpp/"><strong>OledController.cpp</strong></a>)</li>
+<li><strong>oledSetDisplayOn</strong> (<a href="../_oled_controller_8hpp/"><strong>OledController.hpp</strong></a>, <a href="../_oled_controller_8cpp/"><strong>OledController.cpp</strong></a>)</li>
+<li><strong>oledTestConnection</strong> (<a href="../_oled_controller_8hpp/"><strong>OledController.hpp</strong></a>, <a href="../_oled_controller_8cpp/"><strong>OledController.cpp</strong></a>)</li>
+<li><strong>oledUpdateScreen</strong> (<a href="../_oled_controller_8hpp/"><strong>OledController.hpp</strong></a>, <a href="../_oled_controller_8cpp/"><strong>OledController.cpp</strong></a>)</li>
+<li><strong>oledWriteChar</strong> (<a href="../_oled_controller_8hpp/"><strong>OledController.hpp</strong></a>, <a href="../_oled_controller_8cpp/"><strong>OledController.cpp</strong></a>)</li>
+<li><strong>oledWriteCommand</strong> (<a href="../_oled_controller_8hpp/"><strong>OledController.hpp</strong></a>, <a href="../_oled_controller_8cpp/"><strong>OledController.cpp</strong></a>)</li>
+<li><strong>oledWriteData</strong> (<a href="../_oled_controller_8hpp/"><strong>OledController.hpp</strong></a>, <a href="../_oled_controller_8cpp/"><strong>OledController.cpp</strong></a>)</li>
+<li><strong>oledWriteString</strong> (<a href="../_oled_controller_8hpp/"><strong>OledController.hpp</strong></a>, <a href="../_oled_controller_8cpp/"><strong>OledController.cpp</strong></a>)</li>
+<li><strong>oledDegToRad</strong> (<a href="../_oled_controller_8cpp/"><strong>OledController.cpp</strong></a>)</li>
+<li><strong>oledNormalizeTo0_360</strong> (<a href="../_oled_controller_8cpp/"><strong>OledController.cpp</strong></a>)</li>
+</ul>
+<h2 id="p">p</h2>
+<ul>
+<li><strong>pinInit</strong> (<a href="../_bsp_8hpp/"><strong>Bsp.hpp</strong></a>)</li>
+<li><strong>pinRead</strong> (<a href="../_bsp_8hpp/"><strong>Bsp.hpp</strong></a>)</li>
+<li><strong>pinToggle</strong> (<a href="../_bsp_8hpp/"><strong>Bsp.hpp</strong></a>)</li>
+<li><strong>pinWrite</strong> (<a href="../_bsp_8hpp/"><strong>Bsp.hpp</strong></a>)</li>
+<li><strong>pinsInit</strong> (<a href="../_bsp_8hpp/"><strong>Bsp.hpp</strong></a>)</li>
+<li><strong>powerBatteryMidMv</strong> (<a href="../_power_8hpp/"><strong>Power.hpp</strong></a>, <a href="../_power_8cpp/"><strong>Power.cpp</strong></a>)</li>
+<li><strong>powerBatteryMv</strong> (<a href="../_power_8hpp/"><strong>Power.hpp</strong></a>, <a href="../_power_8cpp/"><strong>Power.cpp</strong></a>)</li>
+<li><strong>powerCalibrate</strong> (<a href="../_power_8hpp/"><strong>Power.hpp</strong></a>, <a href="../_power_8cpp/"><strong>Power.cpp</strong></a>)</li>
+<li><strong>powerInit</strong> (<a href="../_power_8hpp/"><strong>Power.hpp</strong></a>, <a href="../_power_8cpp/"><strong>Power.cpp</strong></a>)</li>
+<li><strong>powerPoll</strong> (<a href="../_power_8hpp/"><strong>Power.hpp</strong></a>, <a href="../_power_8cpp/"><strong>Power.cpp</strong></a>)</li>
+<li><strong>powerShutDown</strong> (<a href="../_power_8hpp/"><strong>Power.hpp</strong></a>, <a href="../_power_8cpp/"><strong>Power.cpp</strong></a>)</li>
+<li><strong>powerTemperatureC</strong> (<a href="../_power_8hpp/"><strong>Power.hpp</strong></a>, <a href="../_power_8cpp/"><strong>Power.cpp</strong></a>)</li>
+<li><strong>powerVrefMv</strong> (<a href="../_power_8hpp/"><strong>Power.hpp</strong></a>, <a href="../_power_8cpp/"><strong>Power.cpp</strong></a>)</li>
+<li><strong>printTaskInfo</strong> (<a href="../_debug_8hpp/"><strong>Debug.hpp</strong></a>)</li>
+<li><strong>parser</strong> (<a href="../_control_link_8cpp/"><strong>ControlLink.cpp</strong></a>)</li>
+<li><strong>processRxBuf</strong> (<a href="../_debug_link_8cpp/"><strong>DebugLink.cpp</strong></a>)</li>
+</ul>
+<h2 id="r">r</h2>
+<ul>
+<li><strong>reinitEspStrappingPins</strong> (<a href="../_bsp_8hpp/"><strong>Bsp.hpp</strong></a>)</li>
+<li><strong>rebootToDfu</strong> (<a href="../_debug_8hpp/"><strong>Debug.hpp</strong></a>, <a href="../_debug_8cpp/"><strong>Debug.cpp</strong></a>)</li>
+</ul>
+<h2 id="s">s</h2>
+<ul>
+<li><strong>setLeds</strong> (<a href="../_bsp_8hpp/"><strong>Bsp.hpp</strong></a>)</li>
+<li><strong>softReset</strong> (<a href="../_bsp_8hpp/"><strong>Bsp.hpp</strong></a>, <a href="../_bsp_8cpp/"><strong>Bsp.cpp</strong></a>)</li>
+<li><strong>softResetInit</strong> (<a href="../_bsp_8hpp/"><strong>Bsp.hpp</strong></a>, <a href="../_bsp_8cpp/"><strong>Bsp.cpp</strong></a>)</li>
+<li><strong>stupidServoDispatch</strong> (<a href="../_stupid_servo_controller_8hpp/"><strong>StupidServoController.hpp</strong></a>, <a href="../_stupid_servo_controller_8cpp/"><strong>StupidServoController.cpp</strong></a>)</li>
+<li><strong>stupidServoInit</strong> (<a href="../_stupid_servo_controller_8hpp/"><strong>StupidServoController.hpp</strong></a>, <a href="../_stupid_servo_controller_8cpp/"><strong>StupidServoController.cpp</strong></a>)</li>
+<li><strong>stupidServoReset</strong> (<a href="../_stupid_servo_controller_8hpp/"><strong>StupidServoController.hpp</strong></a>, <a href="../_stupid_servo_controller_8cpp/"><strong>StupidServoController.cpp</strong></a>)</li>
+<li><strong>setMotorPower</strong> (<a href="../_motor_controller_8cpp/"><strong>MotorController.cpp</strong></a>)</li>
+<li><strong>setPwmValue</strong> (<a href="../_motor_controller_8cpp/"><strong>MotorController.cpp</strong></a>)</li>
+<li><strong>stupidServoDisable</strong> (<a href="../_stupid_servo_controller_8cpp/"><strong>StupidServoController.cpp</strong></a>)</li>
+<li><strong>stupidServoSetPosition</strong> (<a href="../_stupid_servo_controller_8cpp/"><strong>StupidServoController.cpp</strong></a>)</li>
+</ul>
+<h2 id="t">t</h2>
+<ul>
+<li><strong>tunnelOnSetLineCodingInIrq</strong> (<a href="../_cdc_uart_tunnel_8hpp/"><strong>CdcUartTunnel.hpp</strong></a>, <a href="../_cdc_uart_tunnel_8cpp/"><strong>CdcUartTunnel.cpp</strong></a>)</li>
+<li><strong>tunnelPoll</strong> (<a href="../_cdc_uart_tunnel_8hpp/"><strong>CdcUartTunnel.hpp</strong></a>, <a href="../_cdc_uart_tunnel_8cpp/"><strong>CdcUartTunnel.cpp</strong></a>)</li>
+<li><strong>tunnelUartInit</strong> (<a href="../_cdc_uart_tunnel_8hpp/"><strong>CdcUartTunnel.hpp</strong></a>, <a href="../_cdc_uart_tunnel_8cpp/"><strong>CdcUartTunnel.cpp</strong></a>)</li>
+<li><strong>tunnelDownstreamHandler</strong> (<a href="../_cdc_uart_tunnel_8cpp/"><strong>CdcUartTunnel.cpp</strong></a>)</li>
+<li><strong>tunnelUartRxPoll</strong> (<a href="../_cdc_uart_tunnel_8cpp/"><strong>CdcUartTunnel.cpp</strong></a>)</li>
+<li><strong>tunnelUartTx</strong> (<a href="../_cdc_uart_tunnel_8cpp/"><strong>CdcUartTunnel.cpp</strong></a>)</li>
+<li><strong>tunnelUartTxReady</strong> (<a href="../_cdc_uart_tunnel_8cpp/"><strong>CdcUartTunnel.cpp</strong></a>)</li>
+<li><strong>tunnelUpstreamHandler</strong> (<a href="../_cdc_uart_tunnel_8cpp/"><strong>CdcUartTunnel.cpp</strong></a>)</li>
+<li><strong>taskFunc</strong> (<a href="../_motor_controller_8cpp/"><strong>MotorController.cpp</strong></a>)</li>
+<li><strong>tunnel_check_for_dfu_request</strong> (<a href="../_usb_cdc_link_8cpp/"><strong>UsbCdcLink.cpp</strong></a>)</li>
+<li><strong>testInt</strong> (<a href="../main_8cpp/"><strong>main.cpp</strong></a>)</li>
+</ul>
+<h2 id="u">u</h2>
+<ul>
+<li><strong>ultrasoundDispatch</strong> (<a href="../_ultrasound_controller_8hpp/"><strong>UltrasoundController.hpp</strong></a>, <a href="../_ultrasound_controller_8cpp/"><strong>UltrasoundController.cpp</strong></a>)</li>
+<li><strong>ultrasoundInit</strong> (<a href="../_ultrasound_controller_8hpp/"><strong>UltrasoundController.hpp</strong></a>, <a href="../_ultrasound_controller_8cpp/"><strong>UltrasoundController.cpp</strong></a>)</li>
+<li><strong>ultrasoundOnEchoEdge</strong> (<a href="../_ultrasound_controller_8hpp/"><strong>UltrasoundController.hpp</strong></a>, <a href="../_ultrasound_controller_8cpp/"><strong>UltrasoundController.cpp</strong></a>)</li>
+<li><strong>ultrasoundReset</strong> (<a href="../_ultrasound_controller_8hpp/"><strong>UltrasoundController.hpp</strong></a>, <a href="../_ultrasound_controller_8cpp/"><strong>UltrasoundController.cpp</strong></a>)</li>
+<li><strong>USB_LP_IRQ_HANDLER</strong> (<a href="../_usb_cdc_link_8cpp/"><strong>UsbCdcLink.cpp</strong></a>)</li>
+</ul>
+<h2 id="v">v</h2>
+<ul>
+<li><strong>vApplicationGetIdleTaskMemory</strong> (<a href="../_free_r_t_o_s_callbacks_8cpp/"><strong>FreeRTOSCallbacks.cpp</strong></a>)</li>
+<li><strong>vApplicationStackOverflowHook</strong> (<a href="../_free_r_t_o_s_callbacks_8cpp/"><strong>FreeRTOSCallbacks.cpp</strong></a>)</li>
+<li><strong>vApplicationTickHook</strong> (<a href="../_free_r_t_o_s_callbacks_8cpp/"><strong>FreeRTOSCallbacks.cpp</strong></a>)</li>
+</ul>
+<h2 id="_">_</h2>
+<ul>
+<li><strong>_write</strong> (<a href="../_debug_link_8cpp/"><strong>DebugLink.cpp</strong></a>)</li>
+<li><strong>_exit</strong> (<a href="../_free_r_t_o_s_callbacks_8cpp/"><strong>FreeRTOSCallbacks.cpp</strong></a>)</li>
+<li><strong>__attribute__</strong> (<a href="../_usb_cdc_link_8cpp/"><strong>UsbCdcLink.cpp</strong></a>)</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2023 Jakub Andrýsek
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/JakubAndrysek" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/KubaAndrysek" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/jakub-andrysek/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+    
+  </body>
+</html>

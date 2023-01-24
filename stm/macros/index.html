@@ -1,0 +1,2644 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="This is a demo of MkDoxy, a tool for generating Doxygen documentation from Markdown files.">
+      
+      
+        <meta name="author" content="Jakub Andrýsek">
+      
+      
+        <link rel="canonical" href="https://jakubandrysek.github.io/mkdoxy-demo/stm/macros/">
+      
+      
+        <link rel="prev" href="../variables/">
+      
+      
+        <link rel="next" href="../files/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>Macros - MkDoxy Demo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#macros" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="MkDoxy Demo" class="md-header__button md-logo" aria-label="MkDoxy Demo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MkDoxy Demo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Macros
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+          
+        
+      </form>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/JakubAndrysek/mkdoxy-demo" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    JakubAndrysek/mkdoxy-demo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../useage/" class="md-tabs__link">
+      How to use it
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../api/" class="md-tabs__link md-tabs__link--active">
+        API Demo
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MkDoxy Demo" class="md-nav__button md-logo" aria-label="MkDoxy Demo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    MkDoxy Demo
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/JakubAndrysek/mkdoxy-demo" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    JakubAndrysek/mkdoxy-demo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../useage/" class="md-nav__link">
+        How to use it
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../api/">API Demo</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="API Demo" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          API Demo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" tabindex="0" aria-expanded="false">
+          ESP-32
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="ESP-32" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          ESP-32
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/links/" class="md-nav__link">
+        Links
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_2_2" type="checkbox" id="__nav_3_2_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2" tabindex="0" aria-expanded="false">
+          Classes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Classes" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Classes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/annotated/" class="md-nav__link">
+        Class List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/classes/" class="md-nav__link">
+        Class Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/hierarchy/" class="md-nav__link">
+        Class Hierarchy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/class_members/" class="md-nav__link">
+        Class Members
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/class_member_functions/" class="md-nav__link">
+        Class Member Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/class_member_variables/" class="md-nav__link">
+        Class Member Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/class_member_typedefs/" class="md-nav__link">
+        Class Member Typedefs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/class_member_enums/" class="md-nav__link">
+        Class Member Enumerations
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_2_3" type="checkbox" id="__nav_3_2_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_3" tabindex="0" aria-expanded="false">
+          Namespaces
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Namespaces" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Namespaces
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/namespaces/" class="md-nav__link">
+        Namespace List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/namespace_members/" class="md-nav__link">
+        Namespace Members
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/namespace_member_functions/" class="md-nav__link">
+        Namespace Member Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/namespace_member_variables/" class="md-nav__link">
+        Namespace Member Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/namespace_member_typedefs/" class="md-nav__link">
+        Namespace Member Typedefs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/namespace_member_enums/" class="md-nav__link">
+        Namespace Member Enumerations
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/functions/" class="md-nav__link">
+        Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/variables/" class="md-nav__link">
+        Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/macros/" class="md-nav__link">
+        Macros
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp/files/" class="md-nav__link">
+        Files
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" checked>
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" tabindex="0" aria-expanded="true">
+          STM-32
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="STM-32" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          STM-32
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../links/" class="md-nav__link">
+        Links
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_3_2" type="checkbox" id="__nav_3_3_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_2" tabindex="0" aria-expanded="false">
+          Classes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Classes" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Classes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annotated/" class="md-nav__link">
+        Class List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classes/" class="md-nav__link">
+        Class Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hierarchy/" class="md-nav__link">
+        Class Hierarchy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_members/" class="md-nav__link">
+        Class Members
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_member_functions/" class="md-nav__link">
+        Class Member Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_member_variables/" class="md-nav__link">
+        Class Member Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_member_typedefs/" class="md-nav__link">
+        Class Member Typedefs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_member_enums/" class="md-nav__link">
+        Class Member Enumerations
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_3_3" type="checkbox" id="__nav_3_3_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_3" tabindex="0" aria-expanded="false">
+          Namespaces
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Namespaces" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Namespaces
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespaces/" class="md-nav__link">
+        Namespace List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_members/" class="md-nav__link">
+        Namespace Members
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_member_functions/" class="md-nav__link">
+        Namespace Member Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_member_variables/" class="md-nav__link">
+        Namespace Member Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_member_typedefs/" class="md-nav__link">
+        Namespace Member Typedefs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_member_enums/" class="md-nav__link">
+        Namespace Member Enumerations
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions/" class="md-nav__link">
+        Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../variables/" class="md-nav__link">
+        Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Macros
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Macros
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a" class="md-nav__link">
+    a
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    c
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d" class="md-nav__link">
+    d
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i" class="md-nav__link">
+    i
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m" class="md-nav__link">
+    m
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o" class="md-nav__link">
+    o
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s" class="md-nav__link">
+    s
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#t" class="md-nav__link">
+    t
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#u" class="md-nav__link">
+    u
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v" class="md-nav__link">
+    v
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#x" class="md-nav__link">
+    x
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../files/" class="md-nav__link">
+        Files
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_4" tabindex="0" aria-expanded="false">
+          Animal
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Animal" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Animal
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/links/" class="md-nav__link">
+        Links
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_4_2" type="checkbox" id="__nav_3_4_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_4_2" tabindex="0" aria-expanded="false">
+          Classes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Classes" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Classes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/annotated/" class="md-nav__link">
+        Class List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/classes/" class="md-nav__link">
+        Class Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/hierarchy/" class="md-nav__link">
+        Class Hierarchy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/class_members/" class="md-nav__link">
+        Class Members
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/class_member_functions/" class="md-nav__link">
+        Class Member Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/class_member_variables/" class="md-nav__link">
+        Class Member Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/class_member_typedefs/" class="md-nav__link">
+        Class Member Typedefs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/class_member_enums/" class="md-nav__link">
+        Class Member Enumerations
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_4_3" type="checkbox" id="__nav_3_4_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_4_3" tabindex="0" aria-expanded="false">
+          Namespaces
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Namespaces" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Namespaces
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/namespaces/" class="md-nav__link">
+        Namespace List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/namespace_members/" class="md-nav__link">
+        Namespace Members
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/namespace_member_functions/" class="md-nav__link">
+        Namespace Member Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/namespace_member_variables/" class="md-nav__link">
+        Namespace Member Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/namespace_member_typedefs/" class="md-nav__link">
+        Namespace Member Typedefs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/namespace_member_enums/" class="md-nav__link">
+        Namespace Member Enumerations
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/functions/" class="md-nav__link">
+        Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/variables/" class="md-nav__link">
+        Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/macros/" class="md-nav__link">
+        Macros
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animal/files/" class="md-nav__link">
+        Files
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a" class="md-nav__link">
+    a
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    c
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d" class="md-nav__link">
+    d
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i" class="md-nav__link">
+    i
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m" class="md-nav__link">
+    m
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o" class="md-nav__link">
+    o
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s" class="md-nav__link">
+    s
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#t" class="md-nav__link">
+    t
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#u" class="md-nav__link">
+    u
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v" class="md-nav__link">
+    v
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#x" class="md-nav__link">
+    x
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+
+<h1 id="macros">Macros</h1>
+<h2 id="a">a</h2>
+<ul>
+<li><strong>AFIO_MAPR_RESERVED</strong> (<a href="../_bsp_8hpp/"><strong>Bsp.hpp</strong></a>)</li>
+<li><strong>AUXILIARY_AND_MOTOR_ADC_IRQ_HANDLER</strong> (<a href="../_bsp_8hpp/"><strong>Bsp.hpp</strong></a>)</li>
+</ul>
+<h2 id="c">c</h2>
+<ul>
+<li><strong>CONTROLUART_TX_DMA_HANDLER</strong> (<a href="../_bsp_8hpp/"><strong>Bsp.hpp</strong></a>)</li>
+<li><strong>configASSERT</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configCHECK_FOR_STACK_OVERFLOW</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configCPU_CLOCK_HZ</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configGENERATE_RUN_TIME_STATS</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configIDLE_SHOULD_YIELD</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configKERNEL_INTERRUPT_PRIORITY</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configLIBRARY_LOWEST_INTERRUPT_PRIORITY</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configMAX_CO_ROUTINE_PRIORITIES</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configMAX_PRIORITIES</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configMAX_SYSCALL_INTERRUPT_PRIORITY</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configMAX_TASK_NAME_LEN</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configMINIMAL_STACK_SIZE</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configPRIO_BITS</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configQUEUE_REGISTRY_SIZE</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configRECORD_STACK_HIGH_ADDRESS</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configSUPPORT_DYNAMIC_ALLOCATION</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configSUPPORT_STATIC_ALLOCATION</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configTICK_RATE_HZ</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configTIMER_QUEUE_LENGTH</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configTIMER_TASK_PRIORITY</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configTIMER_TASK_STACK_DEPTH</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configTOTAL_HEAP_SIZE</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configUSE_16_BIT_TICKS</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configUSE_APPLICATION_TASK_TAG</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configUSE_COUNTING_SEMAPHORES</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configUSE_CO_ROUTINES</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configUSE_IDLE_HOOK</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configUSE_MALLOC_FAILED_HOOK</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configUSE_MUTEXES</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configUSE_PORT_OPTIMISED_TASK_SELECTION</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configUSE_PREEMPTION</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configUSE_RECURSIVE_MUTEXES</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configUSE_TICK_HOOK</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configUSE_TIMERS</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>configUSE_TRACE_FACILITY</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>CDC_DATA_SZ</strong> (<a href="../_usb_cdc_link_8h/"><strong>UsbCdcLink.h</strong></a>)</li>
+<li><strong>CDC_DEBUG_NTF_EP</strong> (<a href="../_usb_cdc_link_8h/"><strong>UsbCdcLink.h</strong></a>)</li>
+<li><strong>CDC_DEBUG_RXD_EP</strong> (<a href="../_usb_cdc_link_8h/"><strong>UsbCdcLink.h</strong></a>)</li>
+<li><strong>CDC_DEBUG_TXD_EP</strong> (<a href="../_usb_cdc_link_8h/"><strong>UsbCdcLink.h</strong></a>)</li>
+<li><strong>CDC_EP0_SIZE</strong> (<a href="../_usb_cdc_link_8h/"><strong>UsbCdcLink.h</strong></a>)</li>
+<li><strong>CDC_NTF_SZ</strong> (<a href="../_usb_cdc_link_8h/"><strong>UsbCdcLink.h</strong></a>)</li>
+<li><strong>CDC_TUNNEL_NTF_EP</strong> (<a href="../_usb_cdc_link_8h/"><strong>UsbCdcLink.h</strong></a>)</li>
+<li><strong>CDC_TUNNEL_RXD_EP</strong> (<a href="../_usb_cdc_link_8h/"><strong>UsbCdcLink.h</strong></a>)</li>
+<li><strong>CDC_TUNNEL_TXD_EP</strong> (<a href="../_usb_cdc_link_8h/"><strong>UsbCdcLink.h</strong></a>)</li>
+<li><strong>COMMAND</strong> (<a href="../_debug_link_8cpp/"><strong>DebugLink.cpp</strong></a>)</li>
+<li><strong>CIRCLE_APPROXIMATION_SEGMENTS</strong> (<a href="../_oled_controller_8cpp/"><strong>OledController.cpp</strong></a>)</li>
+</ul>
+<h2 id="d">d</h2>
+<ul>
+<li><strong>DEBUGUART_HANDLER</strong> (<a href="../_bsp_8hpp/"><strong>Bsp.hpp</strong></a>)</li>
+<li><strong>DEBUGUART_TX_DMA_HANDLER</strong> (<a href="../_bsp_8hpp/"><strong>Bsp.hpp</strong></a>)</li>
+<li><strong>DEBUG</strong> (<a href="../_debug_8hpp/"><strong>Debug.hpp</strong></a>)</li>
+<li><strong>DEBUGLN</strong> (<a href="../_debug_8hpp/"><strong>Debug.hpp</strong></a>)</li>
+<li><strong>DEBUG_DESCRIPTORS</strong> (<a href="../_usb_cdc_link_8cpp/"><strong>UsbCdcLink.cpp</strong></a>)</li>
+</ul>
+<h2 id="i">i</h2>
+<ul>
+<li><strong>IN4AMASK</strong> (<a href="../_bsp_8hpp/"><strong>Bsp.hpp</strong></a>)</li>
+<li><strong>IN4BMASK</strong> (<a href="../_bsp_8hpp/"><strong>Bsp.hpp</strong></a>)</li>
+<li><strong>IN4PORT</strong> (<a href="../_bsp_8hpp/"><strong>Bsp.hpp</strong></a>)</li>
+<li><strong>INCLUDE_eTaskGetState</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>INCLUDE_uxTaskGetStackHighWaterMark</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>INCLUDE_uxTaskPriorityGet</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>INCLUDE_vTaskDelay</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>INCLUDE_vTaskDelayUntil</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>INCLUDE_vTaskDelete</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>INCLUDE_vTaskPrioritySet</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>INCLUDE_vTaskSuspend</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>INCLUDE_xEventGroupSetBitFromISR</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>INCLUDE_xResumeFromISR</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>INCLUDE_xTaskAbortDelay</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>INCLUDE_xTaskGetCurrentTaskHandle</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>INCLUDE_xTaskGetHandle</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>INCLUDE_xTaskGetIdleTaskHandle</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>INCLUDE_xTaskGetSchedulerState</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>INCLUDE_xTaskResumeFromISR</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>INCLUDE_xTimerPendFunctionCall</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>I2CDEV_DEFAULT_READ_TIMEOUT</strong> (<a href="../_i2c_controller_8hpp/"><strong>I2cController.hpp</strong></a>)</li>
+</ul>
+<h2 id="m">m</h2>
+<ul>
+<li><strong>MPU6050_ACCEL_FIFO_EN_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_ACCEL_FS_16</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_ACCEL_FS_2</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_ACCEL_FS_4</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_ACCEL_FS_8</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_ACONFIG_ACCEL_HPF_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_ACONFIG_ACCEL_HPF_LENGTH</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_ACONFIG_AFS_SEL_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_ACONFIG_AFS_SEL_LENGTH</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_ACONFIG_XA_ST_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_ACONFIG_YA_ST_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_ACONFIG_ZA_ST_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_ADDRESS_AD0_HIGH</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_ADDRESS_AD0_LOW</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_BANKSEL_CFG_USER_BANK_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_BANKSEL_MEM_SEL_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_BANKSEL_MEM_SEL_LENGTH</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_BANKSEL_PRFTCH_EN_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_CFG_DLPF_CFG_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_CFG_DLPF_CFG_LENGTH</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_CFG_EXT_SYNC_SET_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_CFG_EXT_SYNC_SET_LENGTH</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_CLOCK_DIV_258</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_CLOCK_DIV_267</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_CLOCK_DIV_276</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_CLOCK_DIV_286</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_CLOCK_DIV_296</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_CLOCK_DIV_308</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_CLOCK_DIV_320</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_CLOCK_DIV_333</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_CLOCK_DIV_348</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_CLOCK_DIV_364</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_CLOCK_DIV_381</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_CLOCK_DIV_400</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_CLOCK_DIV_421</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_CLOCK_DIV_444</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_CLOCK_DIV_471</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_CLOCK_DIV_500</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_CLOCK_INTERNAL</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_CLOCK_KEEP_RESET</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_CLOCK_PLL_EXT19M</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_CLOCK_PLL_EXT32K</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_CLOCK_PLL_XGYRO</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_CLOCK_PLL_YGYRO</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_CLOCK_PLL_ZGYRO</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DEFAULT_ADDRESS</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DELAYCTRL_DELAY_ES_SHADOW_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DELAYCTRL_I2C_SLV0_DLY_EN_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DELAYCTRL_I2C_SLV1_DLY_EN_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DELAYCTRL_I2C_SLV2_DLY_EN_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DELAYCTRL_I2C_SLV3_DLY_EN_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DELAYCTRL_I2C_SLV4_DLY_EN_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DETECT_ACCEL_ON_DELAY_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DETECT_ACCEL_ON_DELAY_LENGTH</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DETECT_DECREMENT_1</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DETECT_DECREMENT_2</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DETECT_DECREMENT_4</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DETECT_DECREMENT_RESET</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DETECT_FF_COUNT_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DETECT_FF_COUNT_LENGTH</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DETECT_MOT_COUNT_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DETECT_MOT_COUNT_LENGTH</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DHPF_0P63</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DHPF_1P25</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DHPF_2P5</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DHPF_5</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DHPF_HOLD</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DHPF_RESET</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DLPF_BW_10</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DLPF_BW_188</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DLPF_BW_20</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DLPF_BW_256</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DLPF_BW_42</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DLPF_BW_5</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DLPF_BW_98</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DMPINT_0_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DMPINT_1_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DMPINT_2_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DMPINT_3_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DMPINT_4_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DMPINT_5_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DMP_MEMORY_BANKS</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DMP_MEMORY_BANK_SIZE</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_DMP_MEMORY_CHUNK_SIZE</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_EXT_SYNC_ACCEL_XOUT_L</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_EXT_SYNC_ACCEL_YOUT_L</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_EXT_SYNC_ACCEL_ZOUT_L</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_EXT_SYNC_DISABLED</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_EXT_SYNC_GYRO_XOUT_L</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_EXT_SYNC_GYRO_YOUT_L</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_EXT_SYNC_GYRO_ZOUT_L</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_EXT_SYNC_TEMP_OUT_L</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_GCONFIG_FS_SEL_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_GCONFIG_FS_SEL_LENGTH</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_GYRO_FS_1000</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_GYRO_FS_2000</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_GYRO_FS_250</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_GYRO_FS_500</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_I2C_MST_CLK_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_I2C_MST_CLK_LENGTH</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_I2C_MST_P_NSR_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_I2C_SLV4_ADDR_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_I2C_SLV4_ADDR_LENGTH</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_I2C_SLV4_EN_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_I2C_SLV4_INT_EN_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_I2C_SLV4_MST_DLY_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_I2C_SLV4_MST_DLY_LENGTH</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_I2C_SLV4_REG_DIS_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_I2C_SLV4_RW_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_I2C_SLV_ADDR_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_I2C_SLV_ADDR_LENGTH</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_I2C_SLV_BYTE_SW_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_I2C_SLV_EN_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_I2C_SLV_GRP_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_I2C_SLV_LEN_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_I2C_SLV_LEN_LENGTH</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_I2C_SLV_REG_DIS_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_I2C_SLV_RW_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_INTCFG_CLKOUT_EN_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_INTCFG_FSYNC_INT_EN_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_INTCFG_FSYNC_INT_LEVEL_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_INTCFG_I2C_BYPASS_EN_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_INTCFG_INT_LEVEL_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_INTCFG_INT_OPEN_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_INTCFG_INT_RD_CLEAR_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_INTCFG_LATCH_INT_EN_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_INTCLEAR_ANYREAD</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_INTCLEAR_STATUSREAD</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_INTDRV_OPENDRAIN</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_INTDRV_PUSHPULL</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_INTERRUPT_DATA_RDY_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_INTERRUPT_DMP_INT_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_INTERRUPT_FF_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_INTERRUPT_FIFO_OFLOW_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_INTERRUPT_I2C_MST_INT_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_INTERRUPT_MOT_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_INTERRUPT_PLL_RDY_INT_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_INTERRUPT_ZMOT_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_INTLATCH_50USPULSE</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_INTLATCH_WAITCLEAR</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_INTMODE_ACTIVEHIGH</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_INTMODE_ACTIVELOW</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_MOTION_MOT_XNEG_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_MOTION_MOT_XPOS_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_MOTION_MOT_YNEG_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_MOTION_MOT_YPOS_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_MOTION_MOT_ZNEG_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_MOTION_MOT_ZPOS_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_MOTION_MOT_ZRMOT_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_MST_I2C_LOST_ARB_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_MST_I2C_SLV0_NACK_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_MST_I2C_SLV1_NACK_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_MST_I2C_SLV2_NACK_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_MST_I2C_SLV3_NACK_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_MST_I2C_SLV4_DONE_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_MST_I2C_SLV4_NACK_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_MST_PASS_THROUGH_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_MULT_MST_EN_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_PATHRESET_ACCEL_RESET_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_PATHRESET_GYRO_RESET_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_PATHRESET_TEMP_RESET_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_PWR1_CLKSEL_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_PWR1_CLKSEL_LENGTH</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_PWR1_CYCLE_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_PWR1_DEVICE_RESET_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_PWR1_SLEEP_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_PWR1_TEMP_DIS_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_PWR2_LP_WAKE_CTRL_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_PWR2_LP_WAKE_CTRL_LENGTH</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_PWR2_STBY_XA_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_PWR2_STBY_XG_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_PWR2_STBY_YA_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_PWR2_STBY_YG_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_PWR2_STBY_ZA_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_PWR2_STBY_ZG_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_ACCEL_CONFIG</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_ACCEL_XOUT_H</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_ACCEL_XOUT_L</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_ACCEL_YOUT_H</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_ACCEL_YOUT_L</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_ACCEL_ZOUT_H</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_ACCEL_ZOUT_L</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_BANK_SEL</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_CONFIG</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_DMP_CFG_1</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_DMP_CFG_2</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_DMP_INT_STATUS</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_EXT_SENS_DATA_00</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_EXT_SENS_DATA_01</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_EXT_SENS_DATA_02</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_EXT_SENS_DATA_03</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_EXT_SENS_DATA_04</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_EXT_SENS_DATA_05</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_EXT_SENS_DATA_06</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_EXT_SENS_DATA_07</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_EXT_SENS_DATA_08</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_EXT_SENS_DATA_09</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_EXT_SENS_DATA_10</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_EXT_SENS_DATA_11</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_EXT_SENS_DATA_12</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_EXT_SENS_DATA_13</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_EXT_SENS_DATA_14</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_EXT_SENS_DATA_15</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_EXT_SENS_DATA_16</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_EXT_SENS_DATA_17</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_EXT_SENS_DATA_18</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_EXT_SENS_DATA_19</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_EXT_SENS_DATA_20</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_EXT_SENS_DATA_21</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_EXT_SENS_DATA_22</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_EXT_SENS_DATA_23</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_FF_DUR</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_FF_THR</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_FIFO_COUNTH</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_FIFO_COUNTL</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_FIFO_EN</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_FIFO_R_W</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_GYRO_CONFIG</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_GYRO_XOUT_H</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_GYRO_XOUT_L</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_GYRO_YOUT_H</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_GYRO_YOUT_L</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_GYRO_ZOUT_H</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_GYRO_ZOUT_L</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_I2C_MST_CTRL</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_I2C_MST_DELAY_CTRL</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_I2C_MST_STATUS</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_I2C_SLV0_ADDR</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_I2C_SLV0_CTRL</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_I2C_SLV0_DO</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_I2C_SLV0_REG</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_I2C_SLV1_ADDR</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_I2C_SLV1_CTRL</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_I2C_SLV1_DO</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_I2C_SLV1_REG</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_I2C_SLV2_ADDR</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_I2C_SLV2_CTRL</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_I2C_SLV2_DO</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_I2C_SLV2_REG</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_I2C_SLV3_ADDR</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_I2C_SLV3_CTRL</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_I2C_SLV3_DO</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_I2C_SLV3_REG</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_I2C_SLV4_ADDR</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_I2C_SLV4_CTRL</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_I2C_SLV4_DI</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_I2C_SLV4_DO</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_I2C_SLV4_REG</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_INT_ENABLE</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_INT_PIN_CFG</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_INT_STATUS</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_MEM_R_W</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_MEM_START_ADDR</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_MOT_DETECT_CTRL</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_MOT_DETECT_STATUS</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_MOT_DUR</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_MOT_THR</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_PWR_MGMT_1</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_PWR_MGMT_2</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_SIGNAL_PATH_RESET</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_SMPLRT_DIV</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_TEMP_OUT_H</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_TEMP_OUT_L</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_USER_CTRL</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_WHO_AM_I</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_XA_OFFS_H</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_XA_OFFS_L_TC</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_XG_OFFS_TC</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_XG_OFFS_USRH</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_XG_OFFS_USRL</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_X_FINE_GAIN</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_YA_OFFS_H</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_YA_OFFS_L_TC</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_YG_OFFS_TC</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_YG_OFFS_USRH</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_YG_OFFS_USRL</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_Y_FINE_GAIN</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_ZA_OFFS_H</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_ZA_OFFS_L_TC</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_ZG_OFFS_TC</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_ZG_OFFS_USRH</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_ZG_OFFS_USRL</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_ZRMOT_DUR</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_ZRMOT_THR</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_RA_Z_FINE_GAIN</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_SLV0_FIFO_EN_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_SLV1_FIFO_EN_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_SLV2_FIFO_EN_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_SLV_3_FIFO_EN_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_TC_OFFSET_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_TC_OFFSET_LENGTH</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_TC_OTP_BNK_VLD_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_TC_PWR_MODE_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_TEMP_FIFO_EN_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_USERCTRL_DMP_EN_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_USERCTRL_DMP_RESET_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_USERCTRL_FIFO_EN_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_USERCTRL_FIFO_RESET_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_USERCTRL_I2C_IF_DIS_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_USERCTRL_I2C_MST_EN_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_USERCTRL_I2C_MST_RESET_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_USERCTRL_SIG_COND_RESET_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_VDDIO_LEVEL_VDD</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_VDDIO_LEVEL_VLOGIC</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_WAIT_FOR_ES_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_WAKE_FREQ_10</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_WAKE_FREQ_1P25</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_WAKE_FREQ_2P5</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_WAKE_FREQ_5</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_WHO_AM_I_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_WHO_AM_I_LENGTH</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_XG_FIFO_EN_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_YG_FIFO_EN_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>MPU6050_ZG_FIFO_EN_BIT</strong> (<a href="../_mpu6050_8hpp/"><strong>Mpu6050.hpp</strong></a>)</li>
+<li><strong>mpu_ACCEL_FIFO_EN_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_ACCEL_FS_16</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_ACCEL_FS_2</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_ACCEL_FS_4</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_ACCEL_FS_8</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_ACONFIG_ACCEL_HPF_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_ACONFIG_ACCEL_HPF_LENGTH</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_ACONFIG_AFS_SEL_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_ACONFIG_AFS_SEL_LENGTH</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_ACONFIG_XA_ST_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_ACONFIG_YA_ST_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_ACONFIG_ZA_ST_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_ADDRESS_AD0_HIGH</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_ADDRESS_AD0_LOW</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_BANKSEL_CFG_USER_BANK_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_BANKSEL_MEM_SEL_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_BANKSEL_MEM_SEL_LENGTH</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_BANKSEL_PRFTCH_EN_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_CFG_DLPF_CFG_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_CFG_DLPF_CFG_LENGTH</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_CFG_EXT_SYNC_SET_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_CFG_EXT_SYNC_SET_LENGTH</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_CLOCK_DIV_258</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_CLOCK_DIV_267</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_CLOCK_DIV_276</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_CLOCK_DIV_286</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_CLOCK_DIV_296</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_CLOCK_DIV_308</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_CLOCK_DIV_320</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_CLOCK_DIV_333</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_CLOCK_DIV_348</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_CLOCK_DIV_364</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_CLOCK_DIV_381</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_CLOCK_DIV_400</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_CLOCK_DIV_421</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_CLOCK_DIV_444</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_CLOCK_DIV_471</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_CLOCK_DIV_500</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_CLOCK_INTERNAL</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_CLOCK_KEEP_RESET</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_CLOCK_PLL_EXT19M</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_CLOCK_PLL_EXT32K</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_CLOCK_PLL_XGYRO</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_CLOCK_PLL_YGYRO</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_CLOCK_PLL_ZGYRO</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DEFAULT_ADDRESS</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DELAYCTRL_DELAY_ES_SHADOW_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DELAYCTRL_I2C_SLV0_DLY_EN_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DELAYCTRL_I2C_SLV1_DLY_EN_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DELAYCTRL_I2C_SLV2_DLY_EN_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DELAYCTRL_I2C_SLV3_DLY_EN_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DELAYCTRL_I2C_SLV4_DLY_EN_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DETECT_ACCEL_ON_DELAY_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DETECT_ACCEL_ON_DELAY_LENGTH</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DETECT_DECREMENT_1</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DETECT_DECREMENT_2</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DETECT_DECREMENT_4</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DETECT_DECREMENT_RESET</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DETECT_FF_COUNT_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DETECT_FF_COUNT_LENGTH</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DETECT_MOT_COUNT_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DETECT_MOT_COUNT_LENGTH</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DHPF_0P63</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DHPF_1P25</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DHPF_2P5</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DHPF_5</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DHPF_HOLD</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DHPF_RESET</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DLPF_BW_10</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DLPF_BW_188</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DLPF_BW_20</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DLPF_BW_256</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DLPF_BW_42</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DLPF_BW_5</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DLPF_BW_98</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DMPINT_0_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DMPINT_1_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DMPINT_2_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DMPINT_3_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DMPINT_4_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DMPINT_5_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DMP_MEMORY_BANKS</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DMP_MEMORY_BANK_SIZE</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_DMP_MEMORY_CHUNK_SIZE</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_EXT_SYNC_ACCEL_XOUT_L</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_EXT_SYNC_ACCEL_YOUT_L</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_EXT_SYNC_ACCEL_ZOUT_L</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_EXT_SYNC_DISABLED</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_EXT_SYNC_GYRO_XOUT_L</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_EXT_SYNC_GYRO_YOUT_L</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_EXT_SYNC_GYRO_ZOUT_L</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_EXT_SYNC_TEMP_OUT_L</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_GCONFIG_FS_SEL_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_GCONFIG_FS_SEL_LENGTH</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_GYRO_FS_1000</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_GYRO_FS_2000</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_GYRO_FS_250</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_GYRO_FS_500</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_I2C_MST_CLK_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_I2C_MST_CLK_LENGTH</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_I2C_MST_P_NSR_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_I2C_SLV4_ADDR_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_I2C_SLV4_ADDR_LENGTH</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_I2C_SLV4_EN_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_I2C_SLV4_INT_EN_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_I2C_SLV4_MST_DLY_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_I2C_SLV4_MST_DLY_LENGTH</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_I2C_SLV4_REG_DIS_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_I2C_SLV4_RW_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_I2C_SLV_ADDR_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_I2C_SLV_ADDR_LENGTH</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_I2C_SLV_BYTE_SW_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_I2C_SLV_EN_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_I2C_SLV_GRP_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_I2C_SLV_LEN_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_I2C_SLV_LEN_LENGTH</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_I2C_SLV_REG_DIS_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_I2C_SLV_RW_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_INTCFG_CLKOUT_EN_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_INTCFG_FSYNC_INT_EN_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_INTCFG_FSYNC_INT_LEVEL_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_INTCFG_I2C_BYPASS_EN_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_INTCFG_INT_LEVEL_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_INTCFG_INT_OPEN_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_INTCFG_INT_RD_CLEAR_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_INTCFG_LATCH_INT_EN_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_INTCLEAR_ANYREAD</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_INTCLEAR_STATUSREAD</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_INTDRV_OPENDRAIN</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_INTDRV_PUSHPULL</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_INTERRUPT_DATA_RDY_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_INTERRUPT_DMP_INT_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_INTERRUPT_FF_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_INTERRUPT_FIFO_OFLOW_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_INTERRUPT_I2C_MST_INT_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_INTERRUPT_MOT_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_INTERRUPT_PLL_RDY_INT_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_INTERRUPT_ZMOT_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_INTLATCH_50USPULSE</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_INTLATCH_WAITCLEAR</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_INTMODE_ACTIVEHIGH</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_INTMODE_ACTIVELOW</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_MOTION_MOT_XNEG_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_MOTION_MOT_XPOS_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_MOTION_MOT_YNEG_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_MOTION_MOT_YPOS_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_MOTION_MOT_ZNEG_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_MOTION_MOT_ZPOS_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_MOTION_MOT_ZRMOT_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_MST_I2C_LOST_ARB_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_MST_I2C_SLV0_NACK_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_MST_I2C_SLV1_NACK_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_MST_I2C_SLV2_NACK_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_MST_I2C_SLV3_NACK_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_MST_I2C_SLV4_DONE_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_MST_I2C_SLV4_NACK_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_MST_PASS_THROUGH_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_MULT_MST_EN_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_PATHRESET_ACCEL_RESET_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_PATHRESET_GYRO_RESET_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_PATHRESET_TEMP_RESET_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_PWR1_CLKSEL_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_PWR1_CLKSEL_LENGTH</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_PWR1_CYCLE_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_PWR1_DEVICE_RESET_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_PWR1_SLEEP_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_PWR1_TEMP_DIS_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_PWR2_LP_WAKE_CTRL_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_PWR2_LP_WAKE_CTRL_LENGTH</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_PWR2_STBY_XA_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_PWR2_STBY_XG_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_PWR2_STBY_YA_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_PWR2_STBY_YG_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_PWR2_STBY_ZA_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_PWR2_STBY_ZG_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_ACCEL_CONFIG</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_ACCEL_XOUT_H</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_ACCEL_XOUT_L</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_ACCEL_YOUT_H</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_ACCEL_YOUT_L</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_ACCEL_ZOUT_H</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_ACCEL_ZOUT_L</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_BANK_SEL</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_CONFIG</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_DMP_CFG_1</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_DMP_CFG_2</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_DMP_INT_STATUS</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_EXT_SENS_DATA_00</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_EXT_SENS_DATA_01</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_EXT_SENS_DATA_02</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_EXT_SENS_DATA_03</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_EXT_SENS_DATA_04</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_EXT_SENS_DATA_05</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_EXT_SENS_DATA_06</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_EXT_SENS_DATA_07</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_EXT_SENS_DATA_08</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_EXT_SENS_DATA_09</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_EXT_SENS_DATA_10</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_EXT_SENS_DATA_11</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_EXT_SENS_DATA_12</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_EXT_SENS_DATA_13</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_EXT_SENS_DATA_14</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_EXT_SENS_DATA_15</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_EXT_SENS_DATA_16</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_EXT_SENS_DATA_17</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_EXT_SENS_DATA_18</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_EXT_SENS_DATA_19</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_EXT_SENS_DATA_20</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_EXT_SENS_DATA_21</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_EXT_SENS_DATA_22</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_EXT_SENS_DATA_23</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_FF_DUR</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_FF_THR</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_FIFO_COUNTH</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_FIFO_COUNTL</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_FIFO_EN</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_FIFO_R_W</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_GYRO_CONFIG</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_GYRO_XOUT_H</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_GYRO_XOUT_L</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_GYRO_YOUT_H</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_GYRO_YOUT_L</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_GYRO_ZOUT_H</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_GYRO_ZOUT_L</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_I2C_MST_CTRL</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_I2C_MST_DELAY_CTRL</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_I2C_MST_STATUS</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_I2C_SLV0_ADDR</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_I2C_SLV0_CTRL</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_I2C_SLV0_DO</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_I2C_SLV0_REG</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_I2C_SLV1_ADDR</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_I2C_SLV1_CTRL</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_I2C_SLV1_DO</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_I2C_SLV1_REG</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_I2C_SLV2_ADDR</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_I2C_SLV2_CTRL</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_I2C_SLV2_DO</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_I2C_SLV2_REG</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_I2C_SLV3_ADDR</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_I2C_SLV3_CTRL</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_I2C_SLV3_DO</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_I2C_SLV3_REG</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_I2C_SLV4_ADDR</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_I2C_SLV4_CTRL</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_I2C_SLV4_DI</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_I2C_SLV4_DO</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_I2C_SLV4_REG</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_INT_ENABLE</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_INT_PIN_CFG</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_INT_STATUS</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_MEM_R_W</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_MEM_START_ADDR</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_MOT_DETECT_CTRL</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_MOT_DETECT_STATUS</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_MOT_DUR</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_MOT_THR</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_PWR_MGMT_1</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_PWR_MGMT_2</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_SIGNAL_PATH_RESET</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_SMPLRT_DIV</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_TEMP_OUT_H</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_TEMP_OUT_L</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_USER_CTRL</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_WHO_AM_I</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_XA_OFFS_H</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_XA_OFFS_L_TC</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_XG_OFFS_TC</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_XG_OFFS_USRH</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_XG_OFFS_USRL</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_X_FINE_GAIN</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_YA_OFFS_H</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_YA_OFFS_L_TC</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_YG_OFFS_TC</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_YG_OFFS_USRH</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_YG_OFFS_USRL</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_Y_FINE_GAIN</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_ZA_OFFS_H</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_ZA_OFFS_L_TC</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_ZG_OFFS_TC</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_ZG_OFFS_USRH</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_ZG_OFFS_USRL</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_ZRMOT_DUR</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_ZRMOT_THR</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_RA_Z_FINE_GAIN</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_SLV0_FIFO_EN_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_SLV1_FIFO_EN_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_SLV2_FIFO_EN_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_SLV_3_FIFO_EN_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_TC_OFFSET_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_TC_OFFSET_LENGTH</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_TC_OTP_BNK_VLD_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_TC_PWR_MODE_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_TEMP_FIFO_EN_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_USERCTRL_DMP_EN_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_USERCTRL_DMP_RESET_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_USERCTRL_FIFO_EN_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_USERCTRL_FIFO_RESET_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_USERCTRL_I2C_IF_DIS_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_USERCTRL_I2C_MST_EN_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_USERCTRL_I2C_MST_RESET_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_USERCTRL_SIG_COND_RESET_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_VDDIO_LEVEL_VDD</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_VDDIO_LEVEL_VLOGIC</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_WAIT_FOR_ES_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_WAKE_FREQ_10</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_WAKE_FREQ_1P25</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_WAKE_FREQ_2P5</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_WAKE_FREQ_5</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_WHO_AM_I_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_WHO_AM_I_LENGTH</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_XG_FIFO_EN_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_YG_FIFO_EN_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+<li><strong>mpu_ZG_FIFO_EN_BIT</strong> (<a href="../_mpu_controller_8hpp/"><strong>MpuController.hpp</strong></a>)</li>
+</ul>
+<h2 id="o">o</h2>
+<ul>
+<li><strong>OLED_BUFFER_SIZE</strong> (<a href="../_oled_controller_8hpp/"><strong>OledController.hpp</strong></a>)</li>
+<li><strong>OLED_I2C_ADDR</strong> (<a href="../_oled_controller_8hpp/"><strong>OledController.hpp</strong></a>)</li>
+</ul>
+<h2 id="s">s</h2>
+<ul>
+<li><strong>STRINGIFY</strong> (<a href="../_debug_8hpp/"><strong>Debug.hpp</strong></a>)</li>
+</ul>
+<h2 id="t">t</h2>
+<ul>
+<li><strong>TOSTRING</strong> (<a href="../_debug_8hpp/"><strong>Debug.hpp</strong></a>)</li>
+</ul>
+<h2 id="u">u</h2>
+<ul>
+<li><strong>USB_LP_IRQ_HANDLER</strong> (<a href="../_bsp_8hpp/"><strong>Bsp.hpp</strong></a>)</li>
+<li><strong>USE_FreeRTOS_HEAP_4</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+</ul>
+<h2 id="v">v</h2>
+<ul>
+<li><strong>vPortSVCHandler</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+</ul>
+<h2 id="x">x</h2>
+<ul>
+<li><strong>xPortPendSVHandler</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+<li><strong>xPortSysTickHandler</strong> (<a href="../_free_r_t_o_s_config_8h/"><strong>FreeRTOSConfig.h</strong></a>)</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2023 Jakub Andrýsek
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/JakubAndrysek" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/KubaAndrysek" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/jakub-andrysek/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+    
+  </body>
+</html>
