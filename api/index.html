@@ -1595,6 +1595,68 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#show-function-definition-from-project-animals" class="md-nav__link">
+    Show function definition from project animals
+  </a>
+  
+    <nav class="md-nav" aria-label="Show function definition from project animals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-some_global_function" class="md-nav__link">
+    function some_global_function
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#show-class-method-from-project-esp" class="md-nav__link">
+    Show class method from project esp
+  </a>
+  
+    <nav class="md-nav" aria-label="Show class method from project esp">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-brake" class="md-nav__link">
+    function brake
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#show-source-code-from-project-stm" class="md-nav__link">
+    Show source code from project stm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#show-class-from-project-stm" class="md-nav__link">
+    Show class from project stm
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1614,6 +1676,230 @@
 
 <h1 id="api-demo">API Demo</h1>
 <p>Look at folder to see how the API is generated.</p>
+<hr>
+
+<h2 id="show-function-definition-from-project-animals">Show function definition from project animals</h2>
+<div class="highlight"><pre><span></span><code><span class="nt">::</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">doxy.animal.Function</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">void some_global_function(example::Animal *animal)</span>
+</code></pre></div>
+<h3 id="function-some_global_function">function some_global_function</h3>
+<p><em>Some random global function that modifies Animal.</em> 
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">some_global_function</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">example</span><span class="o">::</span><span class="n">Animal</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">animal</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>See also:</strong> Animal </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>animal</code> The pointer to the animal instance </li>
+</ul>
+<hr>
+
+<h2 id="show-class-method-from-project-esp">Show class method from project esp</h2>
+<div class="highlight"><pre><span></span><code><span class="nt">::</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">doxy.esp.Class.Method</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rb::MotorChangeBuilder</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">method</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">brake (MotorId id, uint16_t brakingPower)</span>
+</code></pre></div>
+<h3 id="function-brake">function brake</h3>
+<p><em>Start braking.</em> 
+<div class="highlight"><pre><span></span><code><span class="n">MotorChangeBuilder</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rb</span><span class="o">::</span><span class="n">MotorChangeBuilder</span><span class="o">::</span><span class="n">brake</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">MotorId</span><span class="w"> </span><span class="n">id</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">brakingPower</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>id</code> of the motor (e.g. rb:MotorId::M1) </li>
+<li><code>brakingPower</code> power of the braking, &lt;0, 32767&gt; </li>
+</ul>
+<hr>
+
+<h2 id="show-source-code-from-project-stm">Show source code from project stm</h2>
+<div class="highlight"><pre><span></span><code><span class="nt">::</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">doxy.stm.Code</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">file</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Motor.hpp</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">start</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">end</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+</code></pre></div>
+<p><a href="stm/_motor_8hpp_source.md"><strong>Motor.hpp</strong></a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">motorLoopFreq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Motor</span><span class="w"> </span><span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="n">Motor</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">m_lastEncTicks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="n">reset</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">reset</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">m_velocityReg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Regulator</span><span class="p">(</span><span class="n">INT16_MAX</span><span class="p">,</span><span class="w"> </span><span class="mi">150000</span><span class="p">,</span><span class="w"> </span><span class="mi">300000</span><span class="p">,</span><span class="w"> </span><span class="mi">20000</span><span class="p">);</span>
+<span class="w">        </span><span class="n">m_positionReg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Regulator</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="n">m_dither</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<hr>
+
+<h2 id="show-class-from-project-stm">Show class from project stm</h2>
+<div class="highlight"><pre><span></span><code><span class="nt">::</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">doxy.esp.Class</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rb::MotorChangeBuilder</span>
+</code></pre></div>
+<h1 id="class-rbmotorchangebuilder">Class rb::MotorChangeBuilder</h1>
+<p><a href="esp/annotated.md"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="namespacerb.md"><strong>rb</strong></a> <strong>&gt;</strong> <a href="esp/classrb_1_1_motor_change_builder.md"><strong>MotorChangeBuilder</strong></a></p>
+<p><em>Helper class for building the motor change event.</em> </p>
+<ul>
+<li><code>#include &lt;RBCXManager.h&gt;</code></li>
+</ul>
+<h2 id="public-functions">Public Functions</h2>
+<table>
+<thead>
+<tr>
+<th align="right">Type</th>
+<th align="left">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right"></td>
+<td align="left"><a href="#function-motorchangebuilder-13"><strong>MotorChangeBuilder</strong></a> () <br></td>
+</tr>
+<tr>
+<td align="right"></td>
+<td align="left"><a href="#function-motorchangebuilder-23"><strong>MotorChangeBuilder</strong></a> (const <a href="esp/classrb_1_1_motor_change_builder.md"><strong>MotorChangeBuilder</strong></a> &amp; o) = delete<br></td>
+</tr>
+<tr>
+<td align="right"></td>
+<td align="left"><a href="#function-motorchangebuilder-33"><strong>MotorChangeBuilder</strong></a> (<a href="esp/classrb_1_1_motor_change_builder.md"><strong>MotorChangeBuilder</strong></a> &amp;&amp; o) <br></td>
+</tr>
+<tr>
+<td align="right"><a href="esp/classrb_1_1_motor_change_builder.md"><strong>MotorChangeBuilder</strong></a> &amp;</td>
+<td align="left"><a href="#function-brake"><strong>brake</strong></a> (MotorId id, uint16_t brakingPower) <br><em>Start braking.</em></td>
+</tr>
+<tr>
+<td align="right"><a href="esp/classrb_1_1_motor_change_builder.md"><strong>MotorChangeBuilder</strong></a> &amp;</td>
+<td align="left"><a href="#function-drive"><strong>drive</strong></a> (MotorId id, int32_t positionRelative, int16_t speedTicksPerSecond, Motor::callback_t callback=nullptr) <br></td>
+</tr>
+<tr>
+<td align="right"><a href="esp/classrb_1_1_motor_change_builder.md"><strong>MotorChangeBuilder</strong></a> &amp;</td>
+<td align="left"><a href="#function-drivetovalue"><strong>driveToValue</strong></a> (MotorId id, int32_t positionAbsolute, int16_t speedTicksPerSecond, Motor::callback_t callback=nullptr) <br></td>
+</tr>
+<tr>
+<td align="right"><a href="esp/classrb_1_1_motor_change_builder.md"><strong>MotorChangeBuilder</strong></a> &amp;</td>
+<td align="left"><a href="#function-power"><strong>power</strong></a> (MotorId id, int16_t value) <br><em>Set single motor power.</em></td>
+</tr>
+<tr>
+<td align="right"><a href="esp/classrb_1_1_motor_change_builder.md"><strong>MotorChangeBuilder</strong></a> &amp;</td>
+<td align="left"><a href="#function-pwmmaxpercent"><strong>pwmMaxPercent</strong></a> (MotorId id, int8_t percent) <br><em>Limit motor index's power to percent.</em></td>
+</tr>
+<tr>
+<td align="right">void</td>
+<td align="left"><a href="#function-set"><strong>set</strong></a> () <br><em>Finish the changes and submit the events.</em></td>
+</tr>
+<tr>
+<td align="right"><a href="esp/classrb_1_1_motor_change_builder.md"><strong>MotorChangeBuilder</strong></a> &amp;</td>
+<td align="left"><a href="#function-speed"><strong>speed</strong></a> (MotorId id, int16_t ticksPerSecond) <br><em>Set single motor power.</em></td>
+</tr>
+<tr>
+<td align="right"></td>
+<td align="left"><a href="#function-motorchangebuilder"><strong>~MotorChangeBuilder</strong></a> () <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-functions-documentation">Public Functions Documentation</h2>
+<h3 id="function-motorchangebuilder-13">function MotorChangeBuilder [1/3]</h3>
+<div class="highlight"><pre><span></span><code><span class="n">rb</span><span class="o">::</span><span class="n">MotorChangeBuilder</span><span class="o">::</span><span class="n">MotorChangeBuilder</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div>
+<h3 id="function-motorchangebuilder-23">function MotorChangeBuilder [2/3]</h3>
+<div class="highlight"><pre><span></span><code><span class="n">rb</span><span class="o">::</span><span class="n">MotorChangeBuilder</span><span class="o">::</span><span class="n">MotorChangeBuilder</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">MotorChangeBuilder</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">o</span>
+<span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">delete</span>
+</code></pre></div>
+<h3 id="function-motorchangebuilder-33">function MotorChangeBuilder [3/3]</h3>
+<div class="highlight"><pre><span></span><code><span class="n">rb</span><span class="o">::</span><span class="n">MotorChangeBuilder</span><span class="o">::</span><span class="n">MotorChangeBuilder</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">MotorChangeBuilder</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">o</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<h3 id="function-brake_1">function brake</h3>
+<p><em>Start braking.</em> 
+<div class="highlight"><pre><span></span><code><span class="n">MotorChangeBuilder</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rb</span><span class="o">::</span><span class="n">MotorChangeBuilder</span><span class="o">::</span><span class="n">brake</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">MotorId</span><span class="w"> </span><span class="n">id</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">brakingPower</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>id</code> of the motor (e.g. rb:MotorId::M1) </li>
+<li><code>brakingPower</code> power of the braking, &lt;0, 32767&gt; </li>
+</ul>
+<h3 id="function-drive">function drive</h3>
+<div class="highlight"><pre><span></span><code><span class="n">MotorChangeBuilder</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rb</span><span class="o">::</span><span class="n">MotorChangeBuilder</span><span class="o">::</span><span class="n">drive</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">MotorId</span><span class="w"> </span><span class="n">id</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">positionRelative</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">speedTicksPerSecond</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Motor</span><span class="o">::</span><span class="n">callback_t</span><span class="w"> </span><span class="n">callback</span><span class="o">=</span><span class="k">nullptr</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<h3 id="function-drivetovalue">function driveToValue</h3>
+<div class="highlight"><pre><span></span><code><span class="n">MotorChangeBuilder</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rb</span><span class="o">::</span><span class="n">MotorChangeBuilder</span><span class="o">::</span><span class="n">driveToValue</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">MotorId</span><span class="w"> </span><span class="n">id</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">positionAbsolute</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">speedTicksPerSecond</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Motor</span><span class="o">::</span><span class="n">callback_t</span><span class="w"> </span><span class="n">callback</span><span class="o">=</span><span class="k">nullptr</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<h3 id="function-power">function power</h3>
+<p><em>Set single motor power.</em> 
+<div class="highlight"><pre><span></span><code><span class="n">MotorChangeBuilder</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rb</span><span class="o">::</span><span class="n">MotorChangeBuilder</span><span class="o">::</span><span class="n">power</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">MotorId</span><span class="w"> </span><span class="n">id</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">value</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>id</code> of the motor (e.g. rb:MotorId::M1) </li>
+<li><code>power</code> of the motor &lt;-32768; 32767&gt; </li>
+</ul>
+<h3 id="function-pwmmaxpercent">function pwmMaxPercent</h3>
+<p><em>Limit motor index's power to percent.</em> 
+<div class="highlight"><pre><span></span><code><span class="n">MotorChangeBuilder</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rb</span><span class="o">::</span><span class="n">MotorChangeBuilder</span><span class="o">::</span><span class="n">pwmMaxPercent</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">MotorId</span><span class="w"> </span><span class="n">id</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">int8_t</span><span class="w"> </span><span class="n">percent</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>id</code> of the motor (e.g. rb:MotorId::M1) </li>
+<li><code>percent</code> of the maximal power of the motor &lt;0 - 100&gt; </li>
+</ul>
+<h3 id="function-set">function set</h3>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">rb</span><span class="o">::</span><span class="n">MotorChangeBuilder</span><span class="o">::</span><span class="n">set</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div>
+<h3 id="function-speed">function speed</h3>
+<p><em>Set single motor power.</em> 
+<div class="highlight"><pre><span></span><code><span class="n">MotorChangeBuilder</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rb</span><span class="o">::</span><span class="n">MotorChangeBuilder</span><span class="o">::</span><span class="n">speed</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">MotorId</span><span class="w"> </span><span class="n">id</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">ticksPerSecond</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>id</code> of the motor (e.g. rb:MotorId::M1) </li>
+<li><code>speed</code> of the motor in encoder ticks &lt;-32768; 32767&gt; </li>
+</ul>
+<h3 id="function-motorchangebuilder">function ~MotorChangeBuilder</h3>
+<div class="highlight"><pre><span></span><code><span class="n">rb</span><span class="o">::</span><span class="n">MotorChangeBuilder</span><span class="o">::~</span><span class="n">MotorChangeBuilder</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div>
+<hr />
+<p>The documentation for this class was generated from the following file <code>src-esp/RBCXManager.h</code></p>
 
 
 
