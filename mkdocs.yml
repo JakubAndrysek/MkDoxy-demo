@@ -1,12 +1,12 @@
 site_name: MkDoxy Demo
-site_url: https://jakubandrysek.github.io/mkdoxy-demo/
+site_url: https://jakubandrysek.github.io/MkDoxy-demo/
 site_author: Jakub Andrýsek
 site_description: >-
   This is a demo of MkDoxy, a tool for generating Doxygen documentation from Markdown files.
 
 # Repository
 repo_name: JakubAndrysek/mkdoxy-demo
-repo_url: https://github.com/JakubAndrysek/mkdoxy-demo
+repo_url: https://github.com/JakubAndrysek/MkDoxy-demo
 
 # Copyright
 copyright: Copyright © 2023 Jakub Andrýsek

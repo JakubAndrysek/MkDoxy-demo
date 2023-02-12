@@ -2,8 +2,8 @@
 
 This is a demo of MkDoxy, a tool for generating Doxygen documentation from Markdown files.
 
-### 👉 Look at [JakubAndrysek / MkDoxy](https://github.com/JakubAndrysek/mkdoxy) 👈
-### [Demo of MkDoxy](https://jakubandrysek.github.io/mkdoxy-demo/)
+### 👉 Look at [JakubAndrysek / MkDoxy](https://github.com/JakubAndrysek/MkDoxy) 👈
+### [Demo of MkDoxy](https://jakubandrysek.github.io/MkDoxy-demo/)
 
 ## Installation
 
