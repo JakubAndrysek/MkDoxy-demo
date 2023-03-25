@@ -1,21 +1,31 @@
+fixRelativeLinkDocs:
+	sed  's/\.\/docs\/media/\.\/media/g'  README.md > docs/README.md
+	# sed  's/\.\/docs\/media/\.\/media/g'  README.cs.md > docs/README.cs.md
 
-clean:
-	rm -rf docs
 
-serve:
-	mkdocs serve -a localhost:8081
-
-serve-once:
-	mkdocs serve -a localhost:8081 --no-livereload
-
-debug:
-	mkdocs serve -v -a localhost:8081
-
-build:
+# Docs
+docs-build: fixRelativeLinkDocs
+	@echo "Building docs..."
 	mkdocs build
 
+docs-clean:
+	@echo "Cleaning docs..."
+	rm -rf site
 
-# #run python code with array of versions
+docs-serve: fixRelativeLinkDocs
+	@echo "Serving docs..."
+	mkdocs serve
+
+docs-serve-once: fixRelativeLinkDocs
+	@echo "Deploying docs..."
+	mkdocs serve --no-livereload
+
+docs-deploy: fixRelativeLinkDocs
+	@echo "Deploying docs..."
+	mkdocs gh-deploy --force
+
+
+# Test python code with array of versions
 PY_VERSIONS = 3.8 3.9 3.10 3.11
 
 installDepsAllPy:

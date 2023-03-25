@@ -2,4 +2,6 @@ mkdocs
 mkdocs-material
 Jinja2
 ruamel.yaml
-git+https://github.com/JakubAndrysek/mkdoxy
+mkdoxy
+mkdocs-glightbox
+mkdocs-git-revision-date-localized-plugin

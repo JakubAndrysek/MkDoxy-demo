@@ -1,0 +1,10 @@
+dependencies:
+  idf: ">=5.0"
+  jac-machine:
+    path: src
+    git: git@github.com:cubicap/Jaculus-machine.git
+    version: f92ee70bef93860b9189f7f75b944e776da98712
+  jac-link:
+    path: src
+    git: git@github.com:cubicap/Jaculus-link.git
+    version: fcdcbe69e688deb9a7066559bf87f94788d91504

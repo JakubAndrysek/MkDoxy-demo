@@ -1,5 +1,5 @@
 site_name: MkDoxy Demo
-site_url: https://jakubandrysek.github.io/MkDoxy-demo/
+site_url: https://mkdoxy-demo.kubaandrysek.cz/
 site_author: Jakub Andrýsek
 site_description: >-
   This is a demo of MkDoxy, a tool for generating Doxygen documentation from Markdown files.
@@ -45,25 +45,35 @@ use_directory_urls: True
 #use_directory_urls: False
 
 plugins:
+  - search
+  - glightbox
   - mkdoxy:
       projects:
         esp:
-          src-dirs: src-esp
+          src-dirs: demo-projets/esp
           full-doc: True
           doxy-cfg:
             FILE_PATTERNS: "*.cpp *.h*"
             EXAMPLE_PATH: examples
             RECURSIVE: True
         animal:
-          src-dirs: src-animal
+          src-dirs: demo-projets/animal
           full-doc: True
           doxy-cfg:
             FILE_PATTERNS: "*.cpp *.h*"
             EXAMPLE_PATH: examples
             RECURSIVE: True
         stm:
-          src-dirs: src-stm32
+          src-dirs: demo-projets/stm32
           full-doc: True
+
+        jaculus:
+          src-dirs: demo-projets/jaculus/main demo-projets/jaculus/managed_components/jac-link demo-projets/jaculus/managed_components/jac-machine
+          full-doc: True
+          doxy-cfg:
+            FILE_PATTERNS: "*.cpp *.h*"
+            EXAMPLE_PATH: examples
+            RECURSIVE: True
 
       save-api: .mkdoxy
       full-doc: True
@@ -74,12 +84,16 @@ markdown_extensions:
   - pymdownx.highlight
   - pymdownx.superfences
 
+extra_javascript:
+  - assets/js/open_in_new_tab.js
+
 nav:
-  - 'Home': 'index.md'
+  - 'Home': 'README.md'
   - useage.md
   - API Demo:
       - api/index.md
       - ESP-32:
+          - esp/index.md
           - 'Links': 'esp/links.md'
           - 'Classes':
               - 'Class List': 'esp/annotated.md'
@@ -102,6 +116,7 @@ nav:
           - 'Macros': 'esp/macros.md'
           - 'Files': 'esp/files.md'
       - STM-32:
+          - stm32/index.md
           - 'Links': 'stm/links.md'
           - 'Classes':
               - 'Class List': 'stm/annotated.md'
@@ -124,6 +139,7 @@ nav:
           - 'Macros': 'stm/macros.md'
           - 'Files': 'stm/files.md'
       - Animal:
+          - animal/index.md
           - 'Links': 'animal/links.md'
           - 'Classes':
               - 'Class List': 'animal/annotated.md'
@@ -145,3 +161,26 @@ nav:
           - 'Variables': 'animal/variables.md'
           - 'Macros': 'animal/macros.md'
           - 'Files': 'animal/files.md'
+      - Jaculus:
+          - jaculus/index.md
+          - 'Links': 'jaculus/links.md'
+          - 'Classes':
+              - 'Class List': 'jaculus/annotated.md'
+              - 'Class Index': 'jaculus/classes.md'
+              - 'Class Hierarchy': 'jaculus/hierarchy.md'
+              - 'Class Members': 'jaculus/class_members.md'
+              - 'Class Member Functions': 'jaculus/class_member_functions.md'
+              - 'Class Member Variables': 'jaculus/class_member_variables.md'
+              - 'Class Member Typedefs': 'jaculus/class_member_typedefs.md'
+              - 'Class Member Enumerations': 'jaculus/class_member_enums.md'
+          - 'Namespaces':
+              - 'Namespace List': 'jaculus/namespaces.md'
+              - 'Namespace Members': 'jaculus/namespace_members.md'
+              - 'Namespace Member Functions': 'jaculus/namespace_member_functions.md'
+              - 'Namespace Member Variables': 'jaculus/namespace_member_variables.md'
+              - 'Namespace Member Typedefs': 'jaculus/namespace_member_typedefs.md'
+              - 'Namespace Member Enumerations': 'jaculus/namespace_member_enums.md'
+          - 'Functions': 'jaculus/functions.md'
+          - 'Variables': 'jaculus/variables.md'
+          - 'Macros': 'jaculus/macros.md'
+          - 'Files': 'jaculus/files.md'

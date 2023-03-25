@@ -132,3 +132,5 @@ site
 .mkdoxy
 
 .DS_Store
+build
+quickjs
