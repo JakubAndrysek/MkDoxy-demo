@@ -4,5 +4,5 @@ Jinja2
 ruamel.yaml
 mkdoxy
 mkdocs-glightbox
-open-in-new-tab
+mkdocs-open-in-new-tab
 mkdocs-git-revision-date-localized-plugin
