@@ -68,6 +68,8 @@ plugins:
         esp:
           src-dirs: demo-projets/esp
           full-doc: True
+          template-dir: templates-custom
+          # Example of custom template: https://mkdoxy-demo.kubaandrysek.cz/esp/annotated/
           doxy-cfg:
             FILE_PATTERNS: "*.cpp *.h*"
             EXAMPLE_PATH: examples

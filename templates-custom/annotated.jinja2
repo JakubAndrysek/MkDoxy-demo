@@ -1,0 +1,34 @@
+# Class List
+
+> **Warning**
+> This is custom template. Look at documentation for more information.
+>
+> Template source: [templates-custom/annotated.jinja2](https://github.com/JakubAndrysek/MkDoxy-demo/blob/main/templates-custom/annotated.jinja2)
+>
+> Add `template-dir: path/to/userDefined/templates` to your project configuration like in this example:
+
+
+
+```yaml
+  - mkdoxy:
+      projects:
+        esp:
+          src-dirs: demo-projets/esp
+          full-doc: True
+          template-dir: path/to/userDefined/templates
+          doxy-cfg:
+            FILE_PATTERNS: "*.cpp *.h*"
+            EXAMPLE_PATH: examples
+            RECURSIVE: True
+```
+
+Here are the classes, structs, unions and interfaces with brief descriptions:
+
+{% for node in nodes recursive %}
+{%- if node.is_parent %}
+* **{{node.kind.value}}** [**{{node.name_short}}**]({{node.url}}) {{node.brief}}
+{%- if node.has_children %}
+  {{- loop(node.children)|indent(2, true) }}
+{%- endif %}
+{%- endif -%}
+{%- endfor %}
