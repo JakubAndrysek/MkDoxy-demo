@@ -75,42 +75,41 @@ use_directory_urls: True
 
 plugins:
   - search
-  - glightbox
   - open-in-new-tab
   - mkdoxy:
       projects:
         esp:
-          src-dirs: demo-projets/esp
-          full-doc: True
-          template-dir: templates-custom
+          src_dirs: demo-projets/esp
+          full_doc: True
+          custom_template_dir: templates-custom
           # Example of custom template: https://mkdoxy-demo.kubaandrysek.cz/esp/annotated/
-          doxy-cfg:
+          doxy_config_dict:
             FILE_PATTERNS: "*.cpp *.h*"
             EXAMPLE_PATH: examples
             RECURSIVE: True
         animal:
-          src-dirs: demo-projets/animal
-          full-doc: True
-          doxy-cfg:
+          src_dirs: demo-projets/animal
+          full_doc: True
+          doxy_config_dict:
             FILE_PATTERNS: "*.cpp *.h*"
             EXAMPLE_PATH: examples
             RECURSIVE: True
         stm:
-          src-dirs: demo-projets/stm32
-          full-doc: True
+          src_dirs: demo-projets/stm32
+          full_doc: True
 
         jaculus:
-          src-dirs: demo-projets/jaculus/main demo-projets/jaculus/managed_components/jac-link demo-projets/jaculus/managed_components/jac-machine
-          full-doc: True
-          doxy-cfg:
+          src_dirs: demo-projets/jaculus/main demo-projets/jaculus/managed_components/jac-link demo-projets/jaculus/managed_components/jac-machine
+          full_doc: True
+          doxy_config_dict:
             FILE_PATTERNS: "*.cpp *.h*"
             EXAMPLE_PATH: examples
             RECURSIVE: True
 
-      save-api: .mkdoxy
-      full-doc: True
+      custom_api_folder: .mkdoxy
+      full_doc: True
       debug: False
-      ignore-errors: False
+      ignore_errors: False
 
 markdown_extensions:
   - pymdownx.highlight
